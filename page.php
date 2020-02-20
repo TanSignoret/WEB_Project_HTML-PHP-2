@@ -9,7 +9,7 @@
 	</head>
 	<body>
     <?php
-    $nbPage = $_GET[$nbPage];
+    $nbPage = $_GET['nbPage'];
      ?>
     <header>
   		<h1>Today's artisans</h1>
