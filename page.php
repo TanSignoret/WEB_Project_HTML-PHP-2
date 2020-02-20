@@ -9,7 +9,7 @@
 	</head>
 	<body>
     <?php
-    $nbPage = $_POST[$nbPage];
+    $nbPage = $_GET[$nbPage];
      ?>
     <header>
   		<h1>Today's artisans</h1>
@@ -19,17 +19,10 @@
     <nav>
       <ul>
         <li><a class="home" href="page.php">Home Page</a></li>
-        var page0 = document.getElementsByClassName('home')
         <li><a class="client" href="page.php">Client Page</a></li>
-        var page1 = document.getElementsByClassName('client')
         <li><a class="jobs" href="page.php">Jobs - Artisans</a></li>
-        var page2 = document.getElementsByClassName('jobs')
       </ul>
     </nav>
-    consol.log(page0)
-    if (page0) {
-      consol.log("page0")
-    }
     <?php
     if ($nbPage == 0) { ?>
       <section>
