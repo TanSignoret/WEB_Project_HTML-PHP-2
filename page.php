@@ -3,6 +3,7 @@
 	<head>
 		<title>Today's artisans - Jobs</title>
 		<meta name="" content="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style2.css">
     <?php $nbPage = 0; ?>
