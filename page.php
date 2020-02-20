@@ -18,9 +18,9 @@
 
     <nav>
       <ul>
-        <li><a class="home" href="page.php">Home Page</a></li>
-        <li><a class="client" href="page.php">Client Page</a></li>
-        <li><a class="jobs" href="page.php">Jobs - Artisans</a></li>
+        <li><a class="home" href="?nbPage=0">Home Page</a></li>
+        <li><a class="client" href="?nbPage=1">Client Page</a></li>
+        <li><a class="jobs" href="?nbPage=2">Jobs - Artisans</a></li>
       </ul>
     </nav>
     <?php
