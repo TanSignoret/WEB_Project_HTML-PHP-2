@@ -1,0 +1,59 @@
+header{
+  height: 10%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+header h1{
+  color: #626262;
+  text-align: center;
+  height: 5%;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 2em;
+}
+/*je n'arrive pas à récuidre l'image du compte*/
+/* a faire ..*/
+header a{
+  max-width: 5px;
+  height: auto;
+}
+
+nav ul form{
+  display: flex;
+  margin-left: 2%;
+  list-style-type: none;
+  align-content: space-between;
+  text-align: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding-left: 0px;
+}
+
+nav ul form li{
+  list-style-type: none;
+  color: #626262;
+  background-color: white;
+  padding: 10px;
+  background-color: #ff9933;
+  text-decoration: none;
+  border-right:  0.5px solid #626262;
+  border-top:  0.5px solid #626262;
+  border-bottom:  0.5px solid #626262;
+}
+nav ul form li a{
+  text-decoration: none;
+  color: black;
+}
+
+nav ul form li:first-child{
+  border-left:  0.5px solid #626262;
+}
+
+nav ul form li:hover{
+  background-color: #ff6600;
+}
+
+nav ul form li:hover a{
+  color: white;
+}

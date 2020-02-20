@@ -1,0 +1,77 @@
+body{
+  font-style: Times, Serif;
+  font-size: 1em;
+  margin: 0px;
+  align: center;
+  width: 90%;
+  margin: auto;
+  background-color: #ff9933;
+}
+h1, h2, h3, h4{
+  color: black;
+}
+
+section{
+  /* border: 2px solid green ; */
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+article{
+  /* border: 2px solid red ; */
+  text-align: left;
+}
+article h2{
+  text-align: center;
+}
+/*uniquement pour la page d'acceuil*/
+article h3{
+  padding-left: 5%;
+}
+/*uniquement pour la page jobs*/
+section .jobs{
+  width: 80%;
+  margin: auto;
+}
+section .jobs h3{
+  justify-content: center;
+}
+section .jobs div{
+  display: flex;
+  justify-content: space-around;
+}
+section .jobs img{
+  width: 20%;
+}
+section .jobs p::after h3{
+  width: 70%;
+}
+/*pour la page client*/
+section .addContract{
+  width: 450px;
+  height: 70px;
+  margin: auto;
+  border: 0.5px solid #626262;
+  float: left;
+}
+section .addContract a{
+  height: 80%;
+  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+section .addContract a img{
+  max-width: 50px;
+  height: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+footer{
+  text-align: justify;
+}
