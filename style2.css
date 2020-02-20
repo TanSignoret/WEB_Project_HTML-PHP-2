@@ -5,7 +5,7 @@ header{
   justify-content: space-between;
 }
 header h1{
-  color: #626262;
+  /* color: #626262; */
   text-align: center;
   height: 5%;
   margin-top: auto;
@@ -32,10 +32,10 @@ nav ul{
 
 nav ul li{
   list-style-type: none;
-  color: #626262;
+  /* color: #626262; */
   background-color: white;
   padding: 10px;
-  background-color: #ff9933;
+  /* background-color: #ff9933; */
   text-decoration: none;
   border-right:  0.5px solid #626262;
   border-top:  0.5px solid #626262;
@@ -51,7 +51,7 @@ nav ul li:first-child{
 }
 
 nav ul li:hover{
-  background-color: #ff6600;
+  /* background-color: #ff6600; */
 }
 
 nav ul li:hover a{
