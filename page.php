@@ -170,7 +170,7 @@
   <?php
 } else {
   $nbPage = 0;
-  header('Refresh: ' .4);
+  header('Refresh: ' .$nbPage);
 }
     ?>
     <footer>
