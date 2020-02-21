@@ -55,8 +55,8 @@
         $lg = intval(fgets($dataFile));
         for ($i = 0; $i < $lg; ++$i) { ?>
           <article class="jobs">
-            <h3><?php echo fgets($dataFile); //titre de l'annonce ?></h3>
-            <h2>Lieu : <?php echo fgets($dataFile) ?></h2>
+            <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
+            <h3>Lieu : <?php echo fgets($dataFile) ?></h3>
             <div>
               <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
               <p>experiance : <?php echo fgets($dataFile) ?></p>
@@ -97,9 +97,11 @@
         $lg = intval(fgets($dataFile));
         for ($i = 1; $i < $lg; $i++) { ?>
           <article class="jobs">
-            <h3><?php echo fgets($dataFile); //titre de l'annonce ?></h3>
+            <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
+            <h3>Lieu : <?php echo fgets($dataFile) ?></h3>
             <div>
               <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
+              <p>experiance : <?php echo fgets($dataFile) ?></p>
               <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
             </div>
           </article>
