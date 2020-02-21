@@ -22,9 +22,9 @@
 
     <nav>
       <ul>
-        <li><a class="home" href="?nbPage=0&connect=0">Home Page</a></li>
-        <li><a class="client" href="?nbPage=1&connect=0">Client Page</a></li>
-        <li><a class="jobs" href="?nbPage=2&connect=0">Jobs - Artisans</a></li>
+        <li><a class="home" href="?nbPage=0&amp;connect=0">Home Page</a></li>
+        <li><a class="client" href="?nbPage=1&amp;connect=0">Client Page</a></li>
+        <li><a class="jobs" href="?nbPage=2&amp;connect=0">Jobs - Artisans</a></li>
       </ul>
     </nav>
     <?php
@@ -43,7 +43,7 @@
     } elseif ($nbPage == 1) { ?>
       <section>
         <article class="addContract">
-          <a href="?nbPage=3&connect=2">
+          <a href="?nbPage=3&amp;connect=2">
             <img src="./Data/image/plus.jpg" alt="un plus">
             <h3>Add a contract</h3>
           </a>
