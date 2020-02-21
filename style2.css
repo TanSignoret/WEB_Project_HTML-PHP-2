@@ -51,7 +51,7 @@ nav ul li:first-child{
 }
 
 nav ul li:hover{
-  /* background-color: #ff6600; */
+  background-color: #ff6600;
 }
 
 nav ul li:hover a{

@@ -3,10 +3,12 @@
 	<head>
 		<title>Today's artisans - Jobs</title>
 		<meta name="" content="">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style2.css">
-    <?php $nbPage = 0; ?>
+    <?php
+    $nbPage = 0;
+    $nbPage = 1;
+    ?>
 	</head>
 	<body>
     <?php
@@ -40,7 +42,7 @@
     } elseif ($nbPage == 1) { ?>
       <section>
         <article class="addContract">
-          <a href="CreateContract.php">
+          <a href="?nbPage=3">
             <img src="./Data/image/plus.jpg" alt="un plus">
             <h3>Add a contract</h3>
           </a>
@@ -54,8 +56,10 @@
         for ($i = 0; $i < $lg; ++$i) { ?>
           <article class="jobs">
             <h3><?php echo fgets($dataFile); //titre de l'annonce ?></h3>
+            <h2>Lieu : <?php echo fgets($dataFile) ?></h2>
             <div>
               <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
+              <p>experiance : <?php echo fgets($dataFile) ?></p>
               <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
             </div>
           </article>
@@ -105,6 +109,14 @@
         ?>
       </section>
       <?php
+    } elseif ($nbPage=3 and connect=1) { ?>
+      <h2>Creer une annonce</h2>
+      <form class="" action="page.php>" method="get">
+        <label for="titre">Quel est le nom de votre annonce :</label>
+        <input type="text" name="titre" value="Jardinage">
+        <label for="lieu">Quel est le lieu de votre annonce :</label>
+        <input type="text" name="lieu" value="Paris">
+      </form>
     }
     ?>
 
