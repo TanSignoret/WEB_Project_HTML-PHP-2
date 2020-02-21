@@ -17,7 +17,7 @@
      ?>
     <header>
   		<h1>Today's artisans</h1>
-      <a href="?connect=1"><img src="./Data/image/acount.jpg" alt="acount"></a>
+      <a href="?nbPage=5&amp;connect=1"><img src="./Data/image/acount.jpg" alt="acount"></a>
     </header>
 
     <nav>
