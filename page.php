@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style2.css">
     <?php
-    $connect = 0;
+    $connect = 2;
     $nbPage = 1;
     ?>
 	</head>
@@ -170,7 +170,7 @@
   <?php
 }
     ?>
-    
+
     <footer>
       <h2>About us :</h2>
       <p>Legals mentions : ...</p>
