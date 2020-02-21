@@ -168,6 +168,8 @@
     </article>
   </section>
   <?php
+} else {
+  $nbPage = 0;
 }
     ?>
 
