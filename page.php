@@ -118,6 +118,7 @@
         <input type="text" name="lieu" value="Paris">
       </form>
     }
+    <?php
     ?>
 
     <footer>
