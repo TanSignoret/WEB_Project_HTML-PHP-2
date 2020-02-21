@@ -7,13 +7,13 @@
 		<link rel="stylesheet" href="style2.css">
     <?php
     $connect = 2;
-    $nbPage = 1;
+    $nbPage = 0;
     ?>
 	</head>
 	<body>
     <?php
-    $nbPage = isset($_GET['nbPage']);
-    $connect = isset($_GET['connect']);
+    $nbPage = htmlentities($_GET['nbPage']);
+    $connect = htmlentities($_GET['connect']);
      ?>
     <header>
   		<h1>Today's artisans</h1>
