@@ -3,14 +3,19 @@ Jardinage
 voiron
 image1.jpg
 experiance 2
+35
 Cherche une personne pour effectuer la taille de la haie de mon jardin
+type=aeffectuer,encours,fini
 Plomberie
 experiance 4
 image2.jpg
+12
 Cherche quelqu'un pour réparer mon evié
 Annonce 3
 image1.jpg
+85
 ci la première petite description
 Annonce 4
 image1.jpg
+1
 ci la première petite description

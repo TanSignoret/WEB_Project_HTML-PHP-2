@@ -6,17 +6,18 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style2.css">
     <?php
-    $nbPage = 0;
+    $connect = 0;
     $nbPage = 1;
     ?>
 	</head>
 	<body>
     <?php
     $nbPage = $_GET['nbPage'];
+    $connect = $_GET['connect'];
      ?>
     <header>
   		<h1>Today's artisans</h1>
-      <a href="countPage.html"><img src="./Data/image/acount.jpg" alt="acount"></a>
+      <a href="?connect=1"><img src="./Data/image/acount.jpg" alt="acount"></a>
     </header>
 
     <nav>
@@ -102,6 +103,7 @@
             <div>
               <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
               <p>experiance : <?php echo fgets($dataFile) ?></p>
+              <p>prix : <?php echo fgets($dataFile) ?> €</p>
               <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
             </div>
           </article>
@@ -111,18 +113,64 @@
         ?>
       </section>
       <?php
-    } elseif ($nbPage=3 and $connect=1) { ?>
+    } elseif ($nbPage==3 and $connect==2) { ?>
       <h2>Creer une annonce</h2>
-      <form class="" action="page.php>" method="get">
+      <form class="" action="page.php?addannonce=1>" method="get">
         <label for="titre">Quel est le nom de votre annonce :</label>
-        <input type="text" name="titre" value="Jardinage">
+        <input type="text" name="titre" value="Jardinage"><br>
         <label for="lieu">Quel est le lieu de votre annonce :</label>
-        <input type="text" name="lieu" value="Paris">
+        <input type="text" name="lieu" value="Paris"><br>
+        <label for="img">Upload une image</label>
+        <input type="text" name="img" value="Jardinage"><br>
+        <label for="exp">Quel est l'experiance requise pour répondre à votre annonce :</label>
+        <input type="number" name="exp" value="1"><br>
+        <label for="px">Quel est la rémunération de votre annonce :</label>
+        <input type="number" name="px" value="0 €"><br>
       </form>
     <?php
-    }
+  } elseif ($connect == 1) { ?>
+    <section>
+      <article class="login">
+        <h2>Vous avez déjà un compte : conectez-vous :</h2>
+        <form class="" action="index.html" method="post">
+          <label for="lg">Login :</label>
+          <input type="text" name="lg" value="tutu">
+          <label for="pwd">Password :</label>
+          <input type="password" name="pwd" value="un mot de passe"><br>
+          <input type="submit" value="Connect">
+        </form>
+      </article>
+      <article class="">
+        <h3>You haven't het a acount. Create you one :</h3>
+        <ul>
+          <li><a href="?Connect=3"></a>Create a acount</li>
+        </ul>
+      </article>
+    </section>
+  <?php
+} elseif ($connect == 3) { ?>
+  <section>
+    <article class="">
+      <h2>Create a acount</h2>
+      <form class="" action="page.php" method="get">
+        <label for="name">Enter your name : </label>
+        <input type="text" name="name" value="Signoret"><br>
+        <label for="first">Enter your first name : </label>
+        <input type="text" name="first" value="Tanguy"><br>
+        <label for="first">Enter your adresse : </label>
+        <input type="text" name="first" value="Voiron"><br>
+        <label for="first">Enter your email-adresse : </label>
+        <input type="email" name="first" value="tanguy.signoret@gmail.com"><br>
+        <label for="first">Enter your phone number : </label>
+        <input type="tel" name="first" value="0102030405"><br>
+        <input type="submit" value="Connect">
+      </form>
+    </article>
+  </section>
+  <?php
+}
     ?>
-
+    
     <footer>
       <h2>About us :</h2>
       <p>Legals mentions : ...</p>
