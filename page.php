@@ -117,8 +117,8 @@
         <label for="lieu">Quel est le lieu de votre annonce :</label>
         <input type="text" name="lieu" value="Paris">
       </form>
-    }
     <?php
+    }
     ?>
 
     <footer>
