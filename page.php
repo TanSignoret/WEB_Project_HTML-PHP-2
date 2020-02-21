@@ -56,10 +56,10 @@
         for ($i = 0; $i < $lg; ++$i) { ?>
           <article class="jobs">
             <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
-            <h3>Lieu : <?php echo fgets($dataFile) ?></h3>
+            <h3>Lieu : <?php echo fgets($dataFile); ?></h3>
             <div>
               <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
-              <p>experiance : <?php echo fgets($dataFile) ?></p>
+              <p>experiance : <?php echo fgets($dataFile); ?></p>
               <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
             </div>
           </article>
