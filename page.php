@@ -12,8 +12,8 @@
 	</head>
 	<body>
     <?php
-    $nbPage = htmlentities($_GET['nbPage']);
-    $connect = htmlentities($_GET['connect']);
+    $nbPage = htmlentities(isset($_GET['nbPage']));
+    $connect = htmlentities(isset($_GET['connect']));
      ?>
     <header>
   		<h1>Today's artisans</h1>
