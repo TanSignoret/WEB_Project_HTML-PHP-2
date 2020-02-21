@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style2.css">
     <?php
-    $connect = 2;
+    // $connect = 2;
     $nbPage = 0;
     ?>
 	</head>
@@ -17,14 +17,14 @@
      ?>
     <header>
   		<h1>Today's artisans</h1>
-      <a href="?nbPage=5&amp;connect=1"><img src="./Data/image/acount.jpg" alt="acount"></a>
+      <a href="?nbPage=5"><img src="./Data/image/acount.jpg" alt="acount"></a>
     </header>
 
     <nav>
       <ul>
-        <li><a class="home" href="?nbPage=0&amp;connect=0">Home Page</a></li>
-        <li><a class="client" href="?nbPage=1&amp;connect=0">Client Page</a></li>
-        <li><a class="jobs" href="?nbPage=2&amp;connect=0">Jobs - Artisans</a></li>
+        <li><a class="home" href="?nbPage=0">Home Page</a></li>
+        <li><a class="client" href="?nbPage=1">Client Page</a></li>
+        <li><a class="jobs" href="?nbPage=2">Jobs - Artisans</a></li>
       </ul>
     </nav>
     <?php
@@ -43,7 +43,7 @@
     } elseif ($nbPage == 1) { ?>
       <section>
         <article class="addContract">
-          <a href="?nbPage=3&amp;connect=2">
+          <a href="?nbPage=3">
             <img src="./Data/image/plus.jpg" alt="un plus">
             <h3>Add a contract</h3>
           </a>
