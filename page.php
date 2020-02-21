@@ -109,7 +109,7 @@
         ?>
       </section>
       <?php
-    } elseif ($nbPage=3 and connect=1) { ?>
+    } elseif ($nbPage=3 and $connect=1) { ?>
       <h2>Creer une annonce</h2>
       <form class="" action="page.php>" method="get">
         <label for="titre">Quel est le nom de votre annonce :</label>
