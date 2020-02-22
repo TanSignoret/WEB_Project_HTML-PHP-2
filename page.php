@@ -12,7 +12,7 @@
 	</head>
 	<body>
     <?php
-    $nbPage = htmlentities(isset($_GET['nbPage']));
+    $nbPage = int(htmlentities(isset($_GET['nbPage'])));
     // $connect = htmlentities(isset($_GET['connect']));
      ?>
     <header>
