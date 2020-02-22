@@ -13,8 +13,8 @@
 	<body>
     <?php
     echo gettype($_GET['nbPage']);
-    $nbPage = intval($_GET['nbPage']);
-    echo gettype(htmlentities(isset($_GET['connect'])));
+    $nbPage = intval(htmlentities(isset($_GET['nbPage'])));
+    $connect = intval(htmlentities(isset($_GET['connect'])));
      ?>
     <header>
   		<h1>Today's artisans</h1>
