@@ -13,7 +13,7 @@
 	<body>
     <?php
     $nbPage = htmlentities(isset($_GET['nbPage']));
-    $connect = htmlentities(isset($_GET['connect']));
+    // $connect = htmlentities(isset($_GET['connect']));
      ?>
     <header>
   		<h1>Today's artisans</h1>
