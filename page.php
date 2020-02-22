@@ -14,7 +14,7 @@
     <?php
     echo gettype($_GET['nbPage']);
     $nbPage = intval($_GET['nbPage']);
-    // $connect = htmlentities(isset($_GET['connect']));
+    echo gettype(htmlentities(isset($_GET['connect'])));
      ?>
     <header>
   		<h1>Today's artisans</h1>
@@ -171,7 +171,7 @@
   <?php
 } else {
   $nbPage = 0;
-  header('Refresh: ' .$nbPage);
+  // header('Refresh: ' .$nbPage);
 }
     ?>
     <footer>
