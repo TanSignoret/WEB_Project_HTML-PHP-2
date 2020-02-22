@@ -12,8 +12,8 @@
 	</head>
 	<body>
     <?php
-    // echo gettype($_GET['nbPage']);
-    $nbPage = intval(htmlentities(isset($_GET['nbPage'])));
+    $nbPage = intval($_GET['nbPage']);
+    // $nbPage = intval(htmlentities(isset($_GET['nbPage'])));
     // $connect = intval(htmlentities(isset($_GET['connect'])));
      ?>
     <header>
