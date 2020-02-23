@@ -68,7 +68,7 @@
           <?php if ($connect == 1) { ?>
             <a href="?nbPage=3&amp;connect=1">
           <?php } else { ?>
-            <a href="?nbPage=3&amp;connect=0">            
+            <a href="?nbPage=3&amp;connect=0">
           <?php } ?>
             <img src="./Data/image/plus.jpg" alt="un plus">
             <h3>Add a contract</h3>
@@ -114,8 +114,7 @@
         </aside>
       </section>
     <?php
-    }
-    elseif ($nbPage == 2) { ?>
+    } elseif ($nbPage == 2) { ?>
       <section class="jobs">
         <h2>Annonces en Rhones - Alpes</h2>
         <?php
@@ -155,57 +154,60 @@
         <input type="submit" value="Connect">
       </form>
     <?php
-  } elseif ($nbPage == 5) { ?>
-    <section>
-      <article class="login">
-        <h2>Vous avez déjà un compte : conectez-vous :</h2>
-        <form class="" action="?nbPage=7&amp;connect=1" method="post">
-          <label for="lg">Login :</label>
-          <input type="text" name="lg" value="tutu">
-          <label for="pwd">Password :</label>
-          <input type="password" name="pwd" value="un mot de passe"><br>
-          <input type="submit" value="Connect">
-        </form>
-      </article>
-      <article class="">
-        <h3>You haven't het a acount. Create you one :</h3>
-        <ul>
-          <li><a href="?nbPage=6">Create a acount</a></li>
-        </ul>
-      </article>
-    </section>
-  <?php
-} elseif ($connect == 6) { ?>
-  <section>
-    <article class="">
-      <h2>Create a acount</h2>
-      <form class="" action="page.php?nbPage=0&amp;connect=0" method="get">
-        <label for="name">Enter your name : </label>
-        <input type="text" name="name" value="Signoret"><br>
-        <label for="first">Enter your first name : </label>
-        <input type="text" name="first" value="Tanguy"><br>
-        <label for="first">Enter your adresse : </label>
-        <input type="text" name="first" value="Voiron"><br>
-        <label for="first">Enter your email-adresse : </label>
-        <input type="email" name="first" value="tanguy.signoret@gmail.com"><br>
-        <label for="first">Enter your phone number : </label>
-        <input type="tel" name="first" value="0102030405"><br>
-        <input type="submit" value="Connect">
-      </form>
-    </article>
-  </section>
-  <?php
-} elseif ($nbPage == 7 and $connect == 1) { ?>
-  <section>
-    <article class="">
-      <h2>Your info</h2>
-      <!-- <?php  ?> affiche les info du login-->
-      <p>Moi</p>
-    </article>
-  </section>
-<?php
-}
-    ?>
+    } elseif ($nbPage == 5 and $connect == 0) { ?>
+      <section>
+        <article class="login">
+          <h2>Vous avez déjà un compte : conectez-vous :</h2>
+          <form class="" action="?nbPage=7&amp;connect=1" method="post">
+            <label for="lg">Login :</label>
+            <input type="text" name="lg" value="tutu">
+            <label for="pwd">Password :</label>
+            <input type="password" name="pwd" value="un mot de passe"><br>
+            <input type="submit" value="Connect">
+          </form>
+        </article>
+        <article class="">
+          <h3>You haven't het a acount. Create you one :</h3>
+          <ul>
+            <li><a href="?nbPage=6">Create a acount</a></li>
+          </ul>
+        </article>
+      </section>
+    <?php
+    } elseif ($connect == 6) { ?>
+      <section>
+        <article class="">
+          <h2>Create a acount</h2>
+          <form class="" action="page.php?nbPage=0&amp;connect=0" method="get">
+            <label for="name">Enter your name : </label>
+            <input type="text" name="name" value="Signoret"><br>
+            <label for="first">Enter your first name : </label>
+            <input type="text" name="first" value="Tanguy"><br>
+            <label for="first">Enter your adresse : </label>
+            <input type="text" name="first" value="Voiron"><br>
+            <label for="first">Enter your email-adresse : </label>
+            <input type="email" name="first" value="tanguy.signoret@gmail.com"><br>
+            <label for="first">Enter your phone number : </label>
+            <input type="tel" name="first" value="0102030405"><br>
+            <input type="submit" value="Connect">
+          </form>
+        </article>
+      </section>
+    <?php
+    } elseif ($nbPage == 5 and $connect == 1) { ?>
+      <section>
+        <article class="">
+          <h2>Your info</h2>
+          <!-- <?php  ?> affiche les info du login-->
+          <p>Moi</p>
+        </article>
+        <article class="">
+          <form class="" action="?connect=0" method="post">
+            <input type="submit" value="Disconnect">
+          </form>
+        </article>
+      </section>
+    <?php } ?>
     <footer>
       <h2>About us :</h2>
       <p>Legals mentions : ...</p>
