@@ -33,13 +33,20 @@
 
     <nav>
       <ul>
-        <li><a class="home" href="?nbPage=0&amp;connect=0">Home Page</a></li>
         <?php
+          if ($connect == 0) { ?>
+            <li><a class="home" href="?nbPage=0&amp;connect=0">Home Page</a></li>
+        <?php } else { ?>
+            <li><a class="home" href="?nbPage=0&amp;connect=1">Home Page</a></li>
+        <?php }
           if ($connect == 1) { ?>
-            <li><a class="client" href="?nbPage=1&amp;connect=0">Client Page</a></li>
+            <li><a class="client" href="?nbPage=1&amp;connect=1">Client Page</a></li>
           <?php }
-        ?>
-        <li><a class="jobs" href="?nbPage=2&amp;connect=0">Jobs - Artisans</a></li>
+          if ($connect == 0) { ?>
+            <li><a class="jobs" href="?nbPage=2&amp;connect=0">Jobs - Artisans</a></li>
+        <?php } else { ?>
+            <li><a class="jobs" href="?nbPage=2&amp;connect=1">Jobs - Artisans</a></li>
+        <?php } ?>
       </ul>
     </nav>
     <?php
