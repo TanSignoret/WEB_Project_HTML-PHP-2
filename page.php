@@ -189,10 +189,6 @@
     </article>
   </section>
 <?php
-} else {
-  $nbPage = 0
-  $connect = 0;
-  // header('Refresh: ' .$nbPage);
 }
     ?>
     <footer>
