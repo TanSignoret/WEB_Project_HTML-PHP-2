@@ -65,7 +65,11 @@
     } elseif ($nbPage == 1 and $connect == 1) { ?>
       <section>
         <article class="addContract">
-          <a href="?nbPage=3&amp;connect=0">
+          <?php if ($connect == 1) { ?>
+            <a href="?nbPage=3&amp;connect=1">
+          <?php } else { ?>
+            <a href="?nbPage=3&amp;connect=0">            
+          <?php } ?>
             <img src="./Data/image/plus.jpg" alt="un plus">
             <h3>Add a contract</h3>
           </a>
