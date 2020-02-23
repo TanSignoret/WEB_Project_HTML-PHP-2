@@ -34,7 +34,11 @@
     <nav>
       <ul>
         <li><a class="home" href="?nbPage=0&amp;connect=0">Home Page</a></li>
-        <li><a class="client" href="?nbPage=1&amp;connect=0">Client Page</a></li>
+        <?php
+          if ($connect == 1) { ?>
+            <li><a class="client" href="?nbPage=1&amp;connect=0">Client Page</a></li>
+          <?php }
+        ?>
         <li><a class="jobs" href="?nbPage=2&amp;connect=0">Jobs - Artisans</a></li>
       </ul>
     </nav>
