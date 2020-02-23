@@ -134,6 +134,7 @@
         <input type="number" name="exp" value="1"><br>
         <label for="px">Quel est la rémunération de votre annonce :</label>
         <input type="number" name="px" value="0 €"><br>
+        <input type="submit" value="Connect">
       </form>
     <?php
   } elseif ($connect == 1) { ?>
