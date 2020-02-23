@@ -22,8 +22,6 @@
     } else {
       $connect = 0;
     }
-    // $nbPage = intval(htmlentities(isset($_GET['nbPage'])));
-    // $connect = intval(htmlentities(isset($_GET['connect'])));
      ?>
     <header>
   		<h1>Today's artisans</h1>
@@ -32,9 +30,9 @@
 
     <nav>
       <ul>
-        <li><a class="home" href="?nbPage=0">Home Page</a></li>
-        <li><a class="client" href="?nbPage=1">Client Page</a></li>
-        <li><a class="jobs" href="?nbPage=2">Jobs - Artisans</a></li>
+        <li><a class="home" href="?nbPage=0&amp;connect=0">Home Page</a></li>
+        <li><a class="client" href="?nbPage=1&amp;connect=0">Client Page</a></li>
+        <li><a class="jobs" href="?nbPage=2&amp;connect=0">Jobs - Artisans</a></li>
       </ul>
     </nav>
     <?php
@@ -53,7 +51,7 @@
     } elseif ($nbPage == 1) { ?>
       <section>
         <article class="addContract">
-          <a href="?nbPage=3">
+          <a href="?nbPage=3&amp;connect=0">
             <img src="./Data/image/plus.jpg" alt="un plus">
             <h3>Add a contract</h3>
           </a>
@@ -125,7 +123,7 @@
       <?php
     } elseif ($nbPage==3 ) {// and $connect=2?>
       <h2>Creer une annonce</h2>
-      <form class="" action="page.php?addannonce=1>" method="get">
+      <form class="" action="page.php?addannonce=1&amp;nbPage=0&amp;connect=0>" method="get">
         <label for="titre">Quel est le nom de votre annonce :</label>
         <input type="text" name="titre" value="Jardinage"><br>
         <label for="lieu">Quel est le lieu de votre annonce :</label>
@@ -162,7 +160,7 @@
   <section>
     <article class="">
       <h2>Create a acount</h2>
-      <form class="" action="page.php" method="get">
+      <form class="" action="page.php?nbPage=0&amp;connect=0" method="get">
         <label for="name">Enter your name : </label>
         <input type="text" name="name" value="Signoret"><br>
         <label for="first">Enter your first name : </label>
