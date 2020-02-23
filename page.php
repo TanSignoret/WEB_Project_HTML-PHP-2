@@ -51,7 +51,7 @@
         </article>
       </section>
       <?php
-    } elseif ($nbPage == 1 and $connect=1) { ?>
+    } elseif ($nbPage == 1 and $connect == 1) { ?>
       <section>
         <article class="addContract">
           <a href="?nbPage=3&amp;connect=0">
@@ -155,7 +155,7 @@
       <article class="">
         <h3>You haven't het a acount. Create you one :</h3>
         <ul>
-          <li><a href="?nbPage=6"></a>Create a acount</li>
+          <li><a href="?nbPage=6">Create a acount</a></li>
         </ul>
       </article>
     </section>
@@ -190,7 +190,8 @@
   </section>
 <?php
 } else {
-  $nbPage = 0;
+  $nbPage = 0
+  $connect = 0;
   // header('Refresh: ' .$nbPage);
 }
     ?>
