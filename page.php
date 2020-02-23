@@ -6,7 +6,10 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style2.css">
     <?php
-    // $connect = 2;
+    /*
+    $connect = 0 => pas de connection
+    $connect = 1 => connection en arrière plan
+    */
     $nbPage = 0;
     ?>
 	</head>
@@ -48,7 +51,7 @@
         </article>
       </section>
       <?php
-    } elseif ($nbPage == 1) { ?>
+    } elseif ($nbPage == 1 and $connect=1) { ?>
       <section>
         <article class="addContract">
           <a href="?nbPage=3&amp;connect=0">
@@ -121,7 +124,7 @@
         ?>
       </section>
       <?php
-    } elseif ($nbPage==3 ) {// and $connect=2?>
+    } elseif ($nbPage == 3 ) {// and $connect=2?>
       <h2>Creer une annonce</h2>
       <form class="" action="page.php?addannonce=1&amp;nbPage=0&amp;connect=0>" method="get">
         <label for="titre">Quel est le nom de votre annonce :</label>
@@ -137,11 +140,11 @@
         <input type="submit" value="Connect">
       </form>
     <?php
-  } elseif ($connect == 1) { ?>
+  } elseif ($nbPage == 5) { ?>
     <section>
       <article class="login">
         <h2>Vous avez déjà un compte : conectez-vous :</h2>
-        <form class="" action="index.html" method="post">
+        <form class="" action="?nbPage=7&amp;connect=1" method="post">
           <label for="lg">Login :</label>
           <input type="text" name="lg" value="tutu">
           <label for="pwd">Password :</label>
@@ -152,12 +155,12 @@
       <article class="">
         <h3>You haven't het a acount. Create you one :</h3>
         <ul>
-          <li><a href="?Connect=3"></a>Create a acount</li>
+          <li><a href="?nbPage=6"></a>Create a acount</li>
         </ul>
       </article>
     </section>
   <?php
-} elseif ($connect == 3) { ?>
+} elseif ($connect == 6) { ?>
   <section>
     <article class="">
       <h2>Create a acount</h2>
@@ -177,6 +180,15 @@
     </article>
   </section>
   <?php
+} elseif ($nbPage == 7 and $connect == 1) { ?>
+  <section>
+    <article class="">
+      <h2>Your info</h2>
+      <!-- <?php  ?> affiche les info du login-->
+      <p>Moi</p>
+    </article>
+  </section>
+<?php
 } else {
   $nbPage = 0;
   // header('Refresh: ' .$nbPage);
