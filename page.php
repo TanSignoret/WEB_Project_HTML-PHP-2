@@ -12,7 +12,16 @@
 	</head>
 	<body>
     <?php
-    $nbPage = intval($_GET['nbPage']);
+    if (isset($_GET['nbPage'])) {
+      $nbPage = intval(htmlentities($_GET['nbPage']));
+    } else {
+      $nbPage = 0;
+    }
+    if (isset($_GET['connect'])) {
+      $connect = intval(htmlentities($_GET['connect']));
+    } else {
+      $connect = 0;
+    }
     // $nbPage = intval(htmlentities(isset($_GET['nbPage'])));
     // $connect = intval(htmlentities(isset($_GET['connect'])));
      ?>
