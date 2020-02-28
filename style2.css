@@ -33,7 +33,7 @@ nav ul{
 nav ul li{
   list-style-type: none;
   /* color: #626262; */
-  background-color: white;
+  background-color: #494949;
   padding: 10px;
   /* background-color: #ff9933; */
   text-decoration: none;
@@ -43,7 +43,7 @@ nav ul li{
 }
 nav ul li a{
   text-decoration: none;
-  color: black;
+  color: #ffa64d;
 }
 
 nav ul li:first-child{
@@ -51,9 +51,9 @@ nav ul li:first-child{
 }
 
 nav ul li:hover{
-  background-color: #ff6600;
+  background-color: #595959;
 }
 
 nav ul li:hover a{
-  color: white;
+  color: #494949;
 }
