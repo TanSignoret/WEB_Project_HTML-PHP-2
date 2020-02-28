@@ -28,7 +28,7 @@
      ?>
     <header>
   		<h1>Today's artisans</h1>
-      <a href="?nbPage=5"><img src="./Data/image/acount.jpg" alt="acount"></a>
+      <a href="?nbPage=5"><img src="./Data/image/acount.png" alt="acount"></a>
     </header>
 
     <nav>

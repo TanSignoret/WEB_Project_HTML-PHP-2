@@ -34,6 +34,9 @@ article h3{
 }
 /*uniquement pour la page jobs*/
 section .jobs{
+  border: 0.5px solid white;
+}
+section .jobs{
   width: 80%;
   margin: auto;
 }
@@ -55,7 +58,7 @@ section .addContract{
   width: 450px;
   height: 70px;
   margin: auto;
-  border: 0.5px solid #626262;
+  border: 0.5px solid white;
   float: left;
 }
 section .addContract a{
