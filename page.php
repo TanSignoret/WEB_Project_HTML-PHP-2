@@ -184,11 +184,13 @@
             <label for="first">Enter your first name : </label>
             <input type="text" name="first" value="Tanguy"><br>
             <label for="first">Enter your adresse : </label>
-            <input type="text" name="first" value="Voiron"><br>
+            <input type="text" name="adresse" value="Voiron"><br>
             <label for="first">Enter your email-adresse : </label>
-            <input type="email" name="first" value="tanguy.signoret@gmail.com"><br>
+            <input type="email" name="email" value="tanguy.signoret@gmail.com"><br>
             <label for="first">Enter your phone number : </label>
-            <input type="tel" name="first" value="0102030405"><br>
+            <input type="tel" name="number" value="0102030405"><br>
+            <input class="hide" type="number" name="connect" value="0">
+            <input class="hide" type="number" name="nbPage" value="0">       
             <input type="submit" value="Connect">
           </form>
         </article>

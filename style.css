@@ -92,6 +92,9 @@ form input{
   display: flex;
   justify-content: center;
 } */
+form .hide{
+  display: none;
+}
 
 /*part of style sheet for footer*/
 footer{
