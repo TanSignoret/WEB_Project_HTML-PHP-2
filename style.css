@@ -81,7 +81,7 @@ form input{
   background-color: #494949;
   color: #ffa64d;
   border-left:  0.5px solid #626262;
-  justify-content: center;
+  /* justify-content: center; */
 }
 form{
   display: flex;
