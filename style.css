@@ -36,6 +36,7 @@ article h3{
 .jobsSec{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 section .jobs{
   border: 0.5px solid white;
