@@ -5,11 +5,11 @@ body{
   align: center;
   width: 90%;
   margin: auto;
-  background-color: black;
+  background-color: #595959;
   color: #ffa64d;
 }
 h1, h2, h3, h4{
-  color: black;
+  color: #ffa64d;
 }
 
 section{
@@ -19,7 +19,7 @@ section{
   margin: auto;
   display: flex;
   flex-direction: column;
-  background-color: #000066;
+  /* background-color: #000066; */
 }
 article{
   /* border: 2px solid red ; */
