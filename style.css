@@ -35,8 +35,6 @@ article h3{
 /*uniquement pour la page jobs*/
 section .jobs{
   border: 0.5px solid white;
-}
-section .jobs{
   width: 80%;
   margin: auto;
 }
@@ -44,6 +42,7 @@ section .jobs h3{
   justify-content: center;
 }
 section .jobs div{
+  margin: 1%;
   display: flex;
   justify-content: space-around;
 }
