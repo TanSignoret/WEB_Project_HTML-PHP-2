@@ -178,7 +178,7 @@
       <section>
         <article class="">
           <h2>Create a acount</h2>
-          <form class="" action="page.php?nbPage=0&amp;connect=0" method="get">
+          <form class="" action="?nbPage=0&amp;connect=0" method="get">
             <label for="name">Enter your name : </label>
             <input type="text" name="name" value="Signoret"><br>
             <label for="first">Enter your first name : </label>
