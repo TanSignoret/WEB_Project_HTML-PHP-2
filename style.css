@@ -38,15 +38,17 @@ section .jobs{
   width: 80%;
   margin: auto;
 }
-section .jobs h3{
+section .jobs article{
+  margin: 1%;
+}
+section .jobs article h3{
   justify-content: center;
 }
-section .jobs div{
-  margin: 1%;
+section .jobs article div{
   display: flex;
   justify-content: space-around;
 }
-section .jobs img{
+section .jobs article img{
   width: 20%;
 }
 section .jobs p::after h3{
