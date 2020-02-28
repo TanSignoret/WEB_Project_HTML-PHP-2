@@ -178,7 +178,7 @@
       <section>
         <article class="">
           <h2>Create a acount</h2>
-          <form class="" action="?nbPage=0&amp;connect=0" method="get">
+          <form class="" action="?" method="get">
             <label for="name">Enter your name : </label>
             <input type="text" name="name" value="Signoret"><br>
             <label for="first">Enter your first name : </label>
@@ -189,8 +189,8 @@
             <input type="email" name="email" value="tanguy.signoret@gmail.com"><br>
             <label for="first">Enter your phone number : </label>
             <input type="tel" name="number" value="0102030405"><br>
-            <input class="hide" type="number" name="connect" value="0">
-            <input class="hide" type="number" name="nbPage" value="0">       
+            <input class="hide" type="number" name="connect" value="1">
+            <input class="hide" type="number" name="nbPage" value="0">
             <input type="submit" value="Connect">
           </form>
         </article>
