@@ -81,7 +81,7 @@
         $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "r"); // or die("Unable to open file!");
         $lg = intval(fgets($dataFile));
         for ($i = 0; $i < $lg; ++$i) { ?>
-          <article class="jobs">
+          <article class="jobsCon">
             <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
             <h3>Lieu : <?php echo fgets($dataFile); ?></h3>
             <div>
@@ -115,7 +115,7 @@
       </section>
     <?php
     } elseif ($nbPage == 2) { ?>
-      <section class="jobs">
+      <section class="jobsSec">
         <h2>Annonces en Rhones - Alpes</h2>
         <?php
         $dataFile = fopen("./Data/dataFile.txt", "r") or die("Unable to open file!");

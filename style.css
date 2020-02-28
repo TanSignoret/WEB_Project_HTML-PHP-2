@@ -33,13 +33,14 @@ article h3{
   padding-left: 5%;
 }
 /*uniquement pour la page jobs*/
+.jobsSec{
+  display: flex;
+  flex-direction: column;
+}
 section .jobs{
   border: 0.5px solid white;
   width: 80%;
   margin: auto;
-}
-section .jobs article{
-  margin: 1%;
 }
 section .jobs article h3{
   justify-content: center;
