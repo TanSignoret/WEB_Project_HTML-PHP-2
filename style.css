@@ -77,7 +77,7 @@ section .addContract a img{
   margin-bottom: 1%;
 }
 /*style sheet for froms*/
-form{
+form input{
   background-color: #494949;
   color: #ffa64d;
   justify-content: center;
