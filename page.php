@@ -168,13 +168,13 @@
         </article>
         <article class="">
           <h3>You haven't het a acount. Create you one :</h3>
-          <form action="?nbPage=6&amp;connect=0" method="post">
+          <form action="?nbPage=7&amp;connect=0" method="post">
             <input type="submit" value="Create a new acount"><br>
           </form>
         </article>
       </section>
     <?php
-    } elseif ($connect == 6) { ?>
+  } elseif ($nbPage == 7 and $connect == 0) { ?>
       <section>
         <article class="">
           <h2>Create a acount</h2>
