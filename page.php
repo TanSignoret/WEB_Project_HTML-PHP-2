@@ -168,7 +168,7 @@
         </article>
         <article class="">
           <h3>You haven't het a acount. Create you one :</h3>
-          <form action="?nbPage=7&amp;connect=0" method="post">
+          <form action="?nbPage=6&amp;connect=0" method="post">
             <input type="submit" value="Create a new acount"><br>
           </form>
         </article>
@@ -194,7 +194,7 @@
         </article>
       </section>
     <?php
-    } elseif ($nbPage == 5 and $connect == 1) { ?>
+  } elseif ($nbPage == 7 and $connect == 1) { ?>
       <section>
         <article class="">
           <h2>Your info</h2>

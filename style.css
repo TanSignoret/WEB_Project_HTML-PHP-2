@@ -77,16 +77,6 @@ section .addContract a img{
   margin-bottom: 1%;
 }
 /*style sheet for froms*/
-/* form input{
-  background-color: #494949;
-  color: #ffa64d;
-  border-left:  0.5px solid #626262;
-} */
-
-form input{
-  transition: width 0.4s ease-in-out;
-}
-
 form input{
   margin-left: 1%;
   height: 5%;
