@@ -77,16 +77,30 @@ section .addContract a img{
   margin-bottom: 1%;
 }
 /*style sheet for froms*/
-form input{
+/* form input{
   background-color: #494949;
   color: #ffa64d;
   border-left:  0.5px solid #626262;
-  /* justify-content: center; */
+} */
+
+form input{
+  transition: width 0.4s ease-in-out;
 }
-form{
+
+form input:focus{
+  width: 100%;
+  height: 20px;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: #494949;
+  resize: none;
+}
+/* form{
   display: flex;
   justify-content: center;
-}
+} */
 
 /*part of style sheet for footer*/
 footer{
