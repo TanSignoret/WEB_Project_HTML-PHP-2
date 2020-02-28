@@ -158,19 +158,19 @@
       <section>
         <article class="login">
           <h2>Vous avez déjà un compte : conectez-vous :</h2>
-          <form class="" action="?nbPage=7&amp;connect=1" method="post">
+          <form action="?nbPage=7&amp;connect=1" method="post">
             <label for="lg">Login :</label>
             <input type="text" name="lg" value="tutu">
-            <label for="pwd">Password :</label>
-            <input type="password" name="pwd" value="un mot de passe"><br>
-            <input type="submit" value="Connect">
+            <label for="pwd">Password :</label><br>
+            <input type="password" name="pwd" value="un mot de passe"><br><br>
+            <input type="submit" value="Connect"><br>
           </form>
         </article>
         <article class="">
           <h3>You haven't het a acount. Create you one :</h3>
-          <ul>
-            <li><a href="?nbPage=6">Create a acount</a></li>
-          </ul>
+          <form action="?nbPage=7&amp;connect=0" method="post">
+            <input type="submit" value="Create a new acount"><br>
+          </form>
         </article>
       </section>
     <?php
