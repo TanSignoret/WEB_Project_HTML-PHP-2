@@ -160,8 +160,8 @@
           <h2>Vous avez déjà un compte : conectez-vous :</h2>
           <form action="?nbPage=7&amp;connect=1" method="post">
             <label for="lg">Login :</label>
-            <input type="text" name="lg" value="tutu">
-            <label for="pwd">Password :</label><br>
+            <input type="text" name="lg" value="tutu"><br>
+            <label for="pwd">Password :</label>
             <input type="password" name="pwd" value="un mot de passe"><br><br>
             <input type="submit" value="Connect"><br>
           </form>

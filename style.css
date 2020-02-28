@@ -76,6 +76,12 @@ section .addContract a img{
   margin-top: 1%;
   margin-bottom: 1%;
 }
+/*style sheet for froms*/
+form{
+  background-color: #494949;
+  color: #ffa64d;
+  justify-content: center;
+}
 
 footer{
   text-align: justify;
