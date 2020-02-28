@@ -9,7 +9,7 @@ body{
   color: #ffa64d;
 }
 h1, h2, h3, h4{
-  color: #ffa64d;
+  color: #009;
 }
 
 section{
@@ -88,7 +88,7 @@ form input{
 }
 
 form input{
-  margin-left: 5%;
+  margin-left: 1%;
   height: 5%;
   padding: 5px 5px;
   box-sizing: border-box;
@@ -96,6 +96,7 @@ form input{
   border-radius: 4px;
   background-color: #494949;
   resize: none;
+  color: #ffa64d;
 }
 /* form{
   display: flex;
