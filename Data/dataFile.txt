@@ -1,21 +1,29 @@
 4
+encours
 Jardinage
 voiron
 image1.jpg
-experiance 2
+2
 35
 Cherche une personne pour effectuer la taille de la haie de mon jardin
-type=aeffectuer,encours,fini
+encours
 Plomberie
-experiance 4
+grenoble
 image2.jpg
+4
 12
-Cherche quelqu'un pour réparer mon evié
+Cherche quelqu'un pour réparer mon évier
+fini
 Annonce 3
+loin
 image1.jpg
 85
+12
 ci la première petite description
+encours
 Annonce 4
+tout près
 image1.jpg
+1
 1
 ci la première petite description

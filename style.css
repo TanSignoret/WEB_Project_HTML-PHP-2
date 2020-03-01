@@ -43,14 +43,14 @@ section .jobs{
   width: 80%;
   margin: auto;
 }
-section .jobs article h3{
+section .jobs h3{
   justify-content: center;
 }
-section .jobs article div{
+section .jobs div{
   display: flex;
   justify-content: space-around;
 }
-section .jobs article img{
+section .jobs img{
   width: 20%;
 }
 section .jobs p::after h3{

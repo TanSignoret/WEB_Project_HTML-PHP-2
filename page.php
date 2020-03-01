@@ -1,6 +1,17 @@
  <!DOCTYPE html>
 <html>
 	<head>
+    <?php
+    if ($nbPage == 0) { ?>
+		    <title>Today's artisans - Home</title>
+    <?php } elseif ($nbPage == 1) { ?>
+		    <title>Today's artisans - Client</title>
+    <?php } elseif ($nbPage == 2) { ?>
+		    <title>Today's artisans - Jobs</title>
+    <?php } else { ?>
+		    <title>Today's artisans</title>
+    <?php }
+     ?>
 		<title>Today's artisans - Jobs</title>
 		<meta name="" content="">
 		<link rel="stylesheet" href="style.css">
@@ -24,6 +35,15 @@
       $connect = intval(htmlentities($_GET['connect']));
     } else {
       $connect = 0;
+    }
+    if (isset($_GET['titre']) and isset($_GET['annonce'])) {
+      $nomUtilisateur = htmlentities($_GET['nomuser']);
+      $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w"); // or die("Unable to open file!");
+      file_put_contents($dataFile, htmlentities($_GET['titre']), FILE_APPEND);
+    } elseif (isset($_GET['nomUtilisateur'])) {
+      $nomUtilisateur = htmlentities($_GET['nomuser']);
+      $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w"); // or die("Unable to open file!");
+      file_put_contents($dataFile, htmlentities($_GET['titre']), FILE_APPEND);
     }
      ?>
     <header>
@@ -119,20 +139,24 @@
         <h2>Annonces en Rhones - Alpes</h2>
         <?php
         $dataFile = fopen("./Data/dataFile.txt", "r") or die("Unable to open file!");
-        // file_put_contents($dataFile, $current, FILE_APPEND);
         $lg = intval(fgets($dataFile));
         for ($i = 1; $i < $lg; $i++) { ?>
-          <article class="jobs">
-            <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
-            <h3>Lieu : <?php echo fgets($dataFile) ?></h3>
-            <div>
-              <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
-              <p>experiance : <?php echo fgets($dataFile) ?></p>
-              <p>prix : <?php echo fgets($dataFile) ?> €</p>
-              <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
-            </div>
-          </article>
-          <?php
+          <?php if (fgets($dataFile) == "encours"){ ?>
+            <article class="jobs">
+              <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
+              <h3><?php echo fgets($dataFile); //lieu de l'annonce ?></h3>
+              <div>
+                <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
+                <p><?php echo fgets($dataFile); //experiance demandé?></p>
+                <p><?php echo fgets($dataFile); //rémunération?> €</p>
+                <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
+              </div>
+            </article>
+          <?php } else {
+            for ($i=0; $i <= 6; $i++) {
+              fgets($dataFile);
+            }
+          }
         }
         fclose($dataFile);
         ?>
