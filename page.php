@@ -131,8 +131,8 @@
         $lg = intval(fgets($dataFile));
         for ($i = 1; $i < $lg; $i++) {
           $qqch = fgets($dataFile);
-          echo $qqch.'\n';
-          if ($qqch == 'encours'){ ?>
+          echo gettype($qqch);
+          if ($qqch === 'encours'){ ?>
             <article class="jobs">
               <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
               <h3><?php echo fgets($dataFile); //lieu de l'annonce ?></h3>
