@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html>
 	<head>
-    <?php
+    <!-- <?php
     if ($nbPage == 0) { ?>
 		    <title>Today's artisans - Home</title>
     <?php } elseif ($nbPage == 1) { ?>
@@ -11,7 +11,7 @@
     <?php } else { ?>
 		    <title>Today's artisans</title>
     <?php }
-     ?>
+     ?> -->
 		<title>Today's artisans - Jobs</title>
 		<meta name="" content="">
 		<link rel="stylesheet" href="style.css">
