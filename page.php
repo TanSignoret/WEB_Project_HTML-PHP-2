@@ -1,18 +1,7 @@
  <!DOCTYPE html>
 <html>
 	<head>
-    <!-- <?php
-    if ($nbPage == 0) { ?>
-		    <title>Today's artisans - Home</title>
-    <?php } elseif ($nbPage == 1) { ?>
-		    <title>Today's artisans - Client</title>
-    <?php } elseif ($nbPage == 2) { ?>
-		    <title>Today's artisans - Jobs</title>
-    <?php } else { ?>
-		    <title>Today's artisans</title>
-    <?php }
-     ?> -->
-		<title>Today's artisans - Jobs</title>
+		<title>Today's artisans</title>
 		<meta name="" content="">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style2.css">
@@ -141,7 +130,7 @@
         $dataFile = fopen("./Data/dataFile.txt", "r") or die("Unable to open file!");
         $lg = intval(fgets($dataFile));
         for ($i = 1; $i < $lg; $i++) { ?>
-          <?php if (fgets($dataFile) == "encours"){ ?>
+          <?php if (fgets($dataFile) == 'encours'){ ?>
             <article class="jobs">
               <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
               <h3><?php echo fgets($dataFile); //lieu de l'annonce ?></h3>
