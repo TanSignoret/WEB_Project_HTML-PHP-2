@@ -131,7 +131,7 @@
         $lg = intval(fgets($dataFile));
         // for ($i = 1; $i < $lg; $i++) {
           $qqch = fgets($dataFile);
-          echo ($qqch == 'encours');
+          echo (($qqch == 'encours'));
           echo ($qqch === 'encours');
           echo ($qqch == "encours");
           echo ($qqch === "encours");
