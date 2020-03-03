@@ -133,6 +133,7 @@
 
           $qqch = fgets($dataFile);
           echo ($qqch) ;
+          echo gettype($qqch) ;
           if ($qqch != 'encours'){ ?>
             <article class="jobs">
               <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
@@ -140,7 +141,7 @@
               <div>
                 <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
                 <p>Experiance needed : <?php echo fgets($dataFile); //experiance demandé?></p>
-                <p>Remuneration :<?php echo fgets($dataFile); //rémunération?> €</p>
+                <p>Remuneration : <?php echo fgets($dataFile); //rémunération?> €</p>
                 <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
               </div>
             </article> <?php
