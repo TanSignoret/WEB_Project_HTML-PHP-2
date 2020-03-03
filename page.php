@@ -134,7 +134,7 @@
           $qqch = fgets($dataFile);
           echo ($qqch) ;
           echo gettype($qqch) ;
-          if ($qqch != 'encours'){ ?>
+          if ($qqch != 'fini'){ ?>
             <article class="jobs">
               <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
               <h3>Where : <?php echo fgets($dataFile); //lieu de l'annonce ?></h3>
