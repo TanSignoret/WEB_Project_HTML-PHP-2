@@ -5,8 +5,8 @@ body{
   align: center;
   width: 90%;
   margin: auto;
-  background-color: #494949;
-  color: #ffa64d;
+  background-color: black;
+  color: #f90;
 }
 h1, h2, h3, h4{
   color: #009;
@@ -87,9 +87,9 @@ form input{
   box-sizing: border-box;
   border: 2px solid white;
   border-radius: 4px;
-  background-color: #494949;
+  background-color: black;
   resize: none;
-  color: #ffa64d;
+  color: #f90;
 }
 /* form{
   display: flex;
