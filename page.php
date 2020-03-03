@@ -132,21 +132,19 @@
         for ($i = 1; $i < $lg; $i++) {
 
           $qqch = fgets($dataFile);
-          echo gettype($qqch) ;
-          if ($qqch == 'encours'){
-           ?>
-          <article class="jobs">
-            <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
-            <h3>Where : <?php echo fgets($dataFile); //lieu de l'annonce ?></h3>
-            <div>
-              <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
-              <p>Experiance needed : <?php echo fgets($dataFile); //experiance demandé?></p>
-              <p>Remuneration :<?php echo fgets($dataFile); //rémunération?> €</p>
-              <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
-            </div>
-          </article>
-          <?php
-        } else {
+          echo ($qqch) ;
+          if ($qqch != 'encours'){ ?>
+            <article class="jobs">
+              <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
+              <h3>Where : <?php echo fgets($dataFile); //lieu de l'annonce ?></h3>
+              <div>
+                <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
+                <p>Experiance needed : <?php echo fgets($dataFile); //experiance demandé?></p>
+                <p>Remuneration :<?php echo fgets($dataFile); //rémunération?> €</p>
+                <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
+              </div>
+            </article> <?php
+          } else {
             for ($i=0; $i <= 6; $i++) {
               fgets($dataFile);
             }
