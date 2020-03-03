@@ -138,8 +138,8 @@
               <h3><?php echo fgets($dataFile); //lieu de l'annonce ?></h3>
               <div>
                 <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
-                <p><?php echo fgets($dataFile); //experiance demandé?></p>
-                <p><?php echo fgets($dataFile); //rémunération?> €</p>
+                <p>Experiance needed : <?php echo fgets($dataFile); //experiance demandé?></p>
+                <p>Remuneration :<?php echo fgets($dataFile); //rémunération?> €</p>
                 <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
               </div>
             </article>
@@ -148,7 +148,7 @@
               fgets($dataFile);
             } */
           }
-        
+
         fclose($dataFile);
         ?>
       </section>
