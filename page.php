@@ -135,7 +135,8 @@
           echo ($qqch === 'encours');
           echo ($qqch == "encours");
           echo ($qqch === "encours");
-           if ($qqch === 'encours'){ ?>
+           // if ($qqch === 'encours'){
+             ?>
             <article class="jobs">
               <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
               <h3><?php echo fgets($dataFile); //lieu de l'annonce ?></h3>
@@ -146,10 +147,11 @@
                 <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
               </div>
             </article>
-          <?php } else {
-            for ($i=0; $i <= 6; $i++) {
-              fgets($dataFile);
-            }
+          <?php
+        // } else {
+        //     for ($i=0; $i <= 6; $i++) {
+        //       fgets($dataFile);
+        //     }
           // }
         }
         fclose($dataFile);
