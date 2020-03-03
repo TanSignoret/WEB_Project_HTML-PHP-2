@@ -129,7 +129,7 @@
         <?php
         $dataFile = fopen("./Data/dataFile.txt", "r") or die("Unable to open file!");
         $lg = intval(fgets($dataFile));
-        for ($i = 1; $i < $lg; $i++) {
+        // for ($i = 1; $i < $lg; $i++) {
           $qqch = fgets($dataFile);
           echo ($qqch == 'encours');
           echo ($qqch === 'encours');
@@ -150,7 +150,7 @@
             for ($i=0; $i <= 6; $i++) {
               fgets($dataFile);
             }
-          }
+          // }
         }
         fclose($dataFile);
         ?>
