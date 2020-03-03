@@ -153,7 +153,7 @@
         //       fgets($dataFile);
         //     }
           // }
-        }
+        //}
         fclose($dataFile);
         ?>
       </section>
