@@ -131,8 +131,8 @@
         $lg = intval(fgets($dataFile));
         for ($i = 1; $i < $lg; $i++) {
 
-          $qqch = strval(fgets($dataFile));
-          echo ($qqch) ;
+          $qqch = fgets($dataFile);
+          echo ($qqch) ; echo ".";
           echo gettype($qqch) ;
           if ($qqch != 'fini'){ ?>
             <article class="jobs">
