@@ -48,7 +48,7 @@ section .jobs h3{
 }
 section .jobs div{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 section .jobs img{
   width: 20%;

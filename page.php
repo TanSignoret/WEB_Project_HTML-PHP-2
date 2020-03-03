@@ -131,7 +131,7 @@
         $lg = intval(fgets($dataFile));
         for ($i = 1; $i < $lg; $i++) {
 
-          $qqch = fgets($dataFile);
+          $qqch = strval(fgets($dataFile));
           echo ($qqch) ;
           echo gettype($qqch) ;
           if ($qqch != 'fini'){ ?>
