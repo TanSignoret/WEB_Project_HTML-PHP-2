@@ -1,8 +1,8 @@
  <!DOCTYPE html>
 <html>
 	<head>
-		<title>Today's artisans</title>
 		<meta charset="utf-8">
+		<title>Today's artisans</title>
     <link rel="icon" type="/image/png" href="Data/image/icon.png">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style2.css">
