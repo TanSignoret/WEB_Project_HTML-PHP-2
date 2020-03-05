@@ -67,6 +67,8 @@ article h3{
   width: 25%;
   height: auto;
   float: left;
+  display: flex;
+  flex-direction: column;
 }
 .jobsSec div article div:last-child{
   width: 70%;
