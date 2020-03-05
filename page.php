@@ -3,6 +3,7 @@
 	<head>
 		<title>Today's artisans</title>
 		<meta name="" content="">
+    <link rel="icon" href="">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style2.css">
     <?php
@@ -25,7 +26,7 @@
     } else {
       $connect = 0;
     }
-    if (isset($_GET['titre']) and isset($_GET['annonce'])) {
+    if (isset($_GET['titre']) && isset($_GET['annonce'])) {
       $nomUtilisateur = htmlentities($_GET['nomuser']);
       $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w"); // or die("Unable to open file!");
       file_put_contents($dataFile, htmlentities($_GET['titre']), FILE_APPEND);
@@ -37,29 +38,28 @@
      ?>
     <header>
   		<h1>Today's artisans</h1>
+      <nav>
+        <ul>
+          <?php
+            if ($connect === 0) { ?>
+              <li><a class="home" href="?nbPage=0&amp;connect=0">Home Page</a></li>
+          <?php } else { ?>
+              <li><a class="home" href="?nbPage=0&amp;connect=1">Home Page</a></li>
+          <?php }
+            if ($connect === 1) { ?>
+              <li><a class="client" href="?nbPage=1&amp;connect=1">Client Page</a></li>
+            <?php }
+            if ($connect === 0) { ?>
+              <li><a class="jobs" href="?nbPage=2&amp;connect=0">Jobs - Artisans</a></li>
+          <?php } else { ?>
+              <li><a class="jobs" href="?nbPage=2&amp;connect=1">Jobs - Artisans</a></li>
+          <?php } ?>
+        </ul>
+      </nav>
       <a href="?nbPage=5"><img src="./Data/image/acount.png" alt="acount"></a>
     </header>
-
-    <nav>
-      <ul>
-        <?php
-          if ($connect == 0) { ?>
-            <li><a class="home" href="?nbPage=0&amp;connect=0">Home Page</a></li>
-        <?php } else { ?>
-            <li><a class="home" href="?nbPage=0&amp;connect=1">Home Page</a></li>
-        <?php }
-          if ($connect == 1) { ?>
-            <li><a class="client" href="?nbPage=1&amp;connect=1">Client Page</a></li>
-          <?php }
-          if ($connect == 0) { ?>
-            <li><a class="jobs" href="?nbPage=2&amp;connect=0">Jobs - Artisans</a></li>
-        <?php } else { ?>
-            <li><a class="jobs" href="?nbPage=2&amp;connect=1">Jobs - Artisans</a></li>
-        <?php } ?>
-      </ul>
-    </nav>
     <?php
-    if ($nbPage == 0) { ?>
+    if ($nbPage === 0) { ?>
       <section>
         <article class="presentation">
           <h2>Our compagny :</h2>
@@ -71,10 +71,10 @@
         </article>
       </section>
       <?php
-    } elseif ($nbPage == 1 and $connect == 1) { ?>
+    } elseif ($nbPage === 1 && $connect === 1) { ?>
       <section>
         <article class="addContract">
-          <?php if ($connect == 1) { ?>
+          <?php if ($connect === 1) { ?>
             <a href="?nbPage=3&amp;connect=1">
           <?php } else { ?>
             <a href="?nbPage=3&amp;connect=0">
@@ -123,40 +123,41 @@
         </aside>
       </section>
     <?php
-    } elseif ($nbPage == 2) { ?>
+    } elseif ($nbPage === 2) { ?>
       <section class="jobsSec">
         <h2>Annonces en Rhones - Alpes</h2>
         <?php
         $dataFile = fopen("./Data/dataFile.txt", "r") or die("Unable to open file!");
-        $lg = intval(fgets($dataFile));
-        for ($i = 1; $i < $lg; $i++) {
-
-          $qqch = fgets($dataFile);
-          echo ($qqch) ; echo ".";
-          echo gettype($qqch) ;
-          if ($qqch != 'fini '){ ?>
+        $lg = intval(fgets($dataFile)); ?>
+        <div>
+        <?php for ($i = 0; $i < $lg; $i++) {
+          if (trim(fgets($dataFile)) === 'encours'){ ?>
             <article class="jobs">
-              <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
-              <h3>Where : <?php echo fgets($dataFile); //lieu de l'annonce ?></h3>
-              <div>
-                <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
-                <p>Experiance needed : <?php echo fgets($dataFile); //experiance demandé?></p>
-                <p>Remuneration : <?php echo fgets($dataFile); //rémunération?> €</p>
-                <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
-              </div>
-            </article> <?php
+                <div>
+                  <?php $img = trim(fgets($dataFile)); ?>
+                  <img src=".Data/image/<?php echo $img; //image de l'annonce ?>" alt=".Data/image/<?php echo $img; //image de l'annonce ?>">
+                </div>
+                <div>
+                  <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
+                  <h3>Where : <?php echo fgets($dataFile); //lieu de l'annonce ?></h3>
+                  <p>Experiance needed : <?php echo fgets($dataFile); //experiance dem&&é?></p>
+                  <p>Remuneration : <?php echo fgets($dataFile); //rémunération?> €</p>
+                  <p><?php echo fgets($dataFile); //description?></p>
+                </div>
+            </article><?php
           } else {
-            for ($i=0; $i <= 6; $i++) {
+            for ($j=0; $j < 6; $j++) {
               fgets($dataFile);
             }
-            echo "coucou";
           }
-        }
+        } ?>
+        </div>
+        <?php
         fclose($dataFile);
         ?>
       </section>
       <?php
-    } elseif ($nbPage == 3 ) {// and $connect=2?>
+    } elseif ($nbPage === 3 ) {// && $connect=2?>
       <h2>Creer une annonce</h2>
       <form class="" action="page.php?addannonce=1&amp;nbPage=0&amp;connect=0>" method="get">
         <label for="titre">Quel est le nom de votre annonce :</label>
@@ -172,7 +173,7 @@
         <input type="submit" value="Connect">
       </form>
     <?php
-    } elseif ($nbPage == 5 and $connect == 0) { ?>
+    } elseif ($nbPage === 5 && $connect === 0) { ?>
       <section>
         <article class="login">
           <h2>Vous avez déjà un compte : conectez-vous :</h2>
@@ -192,7 +193,7 @@
         </article>
       </section>
     <?php
-  } elseif ($nbPage == 7 and $connect == 0) { ?>
+  } elseif ($nbPage === 7 && $connect === 0) { ?>
       <section>
         <article class="">
           <h2>Create a acount</h2>
@@ -214,7 +215,7 @@
         </article>
       </section>
     <?php
-  } elseif ($nbPage == 7 and $connect == 1) { ?>
+  } elseif ($nbPage === 7 && $connect === 1) { ?>
       <section>
         <article class="">
           <h2>Your info</h2>
