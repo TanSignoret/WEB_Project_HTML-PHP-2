@@ -6,6 +6,7 @@
     <link rel="icon" href="">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style2.css">
+    <!-- <link rel="stylesheet" href="//static-rav.leboncoin.fr/app.a04675c733cc033ee8f9.css"> -->
     <?php
     /*
     $connect = 0 => pas de connection
@@ -37,26 +38,33 @@
     }
      ?>
     <header>
-  		<h1>Today's artisans</h1>
-      <nav>
-        <ul>
-          <?php
-            if ($connect === 0) { ?>
-              <li><a class="home" href="?nbPage=0&amp;connect=0">Home Page</a></li>
-          <?php } else { ?>
-              <li><a class="home" href="?nbPage=0&amp;connect=1">Home Page</a></li>
-          <?php }
-            if ($connect === 1) { ?>
-              <li><a class="client" href="?nbPage=1&amp;connect=1">Client Page</a></li>
+      <div class="">
+    		<h1>Today's artisans</h1>
+        <nav>
+          <ul>
+            <?php
+              if ($connect === 0) { ?>
+                <li><a class="home" href="?nbPage=0&amp;connect=0">Home Page</a></li>
+            <?php } else { ?>
+                <li><a class="home" href="?nbPage=0&amp;connect=1">Home Page</a></li>
             <?php }
-            if ($connect === 0) { ?>
-              <li><a class="jobs" href="?nbPage=2&amp;connect=0">Jobs - Artisans</a></li>
-          <?php } else { ?>
-              <li><a class="jobs" href="?nbPage=2&amp;connect=1">Jobs - Artisans</a></li>
-          <?php } ?>
-        </ul>
-      </nav>
-      <a href="?nbPage=5"><img src="./Data/image/acount.png" alt="acount"></a>
+              if ($connect === 1) { ?>
+                <li><a class="client" href="?nbPage=1&amp;connect=1">Client Page</a></li>
+              <?php }
+              if ($connect === 0) { ?>
+                <li><a class="jobs" href="?nbPage=2&amp;connect=0">Jobs - Artisans</a></li>
+            <?php } else { ?>
+                <li><a class="jobs" href="?nbPage=2&amp;connect=1">Jobs - Artisans</a></li>
+            <?php }
+              if ($connect === 0) { ?>
+                <li><a href="?nbPage=5"><img src="./Data/image/acount.jpg" alt="acount"></a></li>
+            <?php } else { ?>
+                <li><a href="?nbPage=5"><img src="./Data/image/acount.jpg" alt="acount"></a></li>
+            <?php } ?>
+
+          </ul>
+        </nav>
+      </div>
     </header>
     <?php
     if ($nbPage === 0) { ?>
@@ -135,7 +143,7 @@
             <article class="jobs">
                 <div>
                   <?php $img = trim(fgets($dataFile)); ?>
-                  <img src=".Data/image/<?php echo $img; //image de l'annonce ?>" alt=".Data/image/<?php echo $img; //image de l'annonce ?>">
+                  <img src="./Data/image/<?php echo $img; //image de l'annonce ?>" alt="./Data/image/<?php echo $img; //image de l'annonce ?>">
                 </div>
                 <div>
                   <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>

@@ -1,10 +1,16 @@
 header{
+  width: 100%;
+  background-color: #fff;
+}
+header div{
+  width: 90%;
+  margin: auto;
   height: 10%;
   text-align: center;
   display: flex;
   justify-content: space-between;
 }
-header h1{
+header div h1{
   /* color: #626262; */
   text-align: center;
   height: 5%;
@@ -14,14 +20,13 @@ header h1{
 }
 /*je n'arrive pas à récuidre l'image du compte*/
 /* a faire ..*/
-header a{
+header div a{
   max-width: 5px;
   height: auto;
 }
 
 nav ul{
   display: flex;
-  margin-left: 2%;
   list-style-type: none;
   align-content: space-between;
   text-align: center;
