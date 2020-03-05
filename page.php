@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<title>Today's artisans</title>
-		<meta name="" content="">
-    <link rel="icon" href="">
+		<meta charset="utf-8">
+    <link rel="icon" type="/image/png" href="Data/image/icon.png">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="style2.css">
     <!-- <link rel="stylesheet" href="//static-rav.leboncoin.fr/app.a04675c733cc033ee8f9.css"> -->
@@ -74,8 +74,8 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </article>
         <article class="">
-          <h3>Are you looking for a job ?</h3>
-          <h3>Do you need someone for a job ?</h3>
+          <h2>Are you looking for a job ?</h2>
+          <h2>Do you need someone for a job ?</h2>
         </article>
       </section>
       <?php
@@ -143,13 +143,15 @@
             <article class="jobs">
                 <div>
                   <?php $img = trim(fgets($dataFile)); ?>
-                  <img src="./Data/image/<?php echo $img; //image de l'annonce ?>" alt="./Data/image/<?php echo $img; //image de l'annonce ?>">
+                  <!-- <?php echo "./Data/image/image1.png" //"./Data/image/".$img; //image de l'annonce ?>-->
+                  <!-- <img src="./Data/image/plus.jpg.png" alt="Data/image/image1.png"> -->
+                  <img src="Data/image/image1.png" type="/image/png" alt="">
                 </div>
                 <div>
                   <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
-                  <h3>Where : <?php echo fgets($dataFile); //lieu de l'annonce ?></h3>
+                  <h3><span><?php echo fgets($dataFile);//rémunération?> €</span> / hour</h3>
+                  <p>Where : <?php echo fgets($dataFile); //lieu de l'annonce ?></p>
                   <p>Experiance needed : <?php echo fgets($dataFile); //experiance dem&&é?></p>
-                  <p>Remuneration : <?php echo fgets($dataFile); //rémunération?> €</p>
                   <p><?php echo fgets($dataFile); //description?></p>
                 </div>
             </article><?php

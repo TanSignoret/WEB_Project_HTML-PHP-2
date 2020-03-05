@@ -2,35 +2,35 @@
 encours
 image1.png
 Jardinage
-voiron
-2
 35
-Cherche une personne pour effectuer la taille de la haie de mon jardin
+London
+2
+Find someone to trim the hedge in my garden
 encours
 image2.jpg
 Plomberie
-grenoble
-4
 12
-Cherche quelqu'un pour réparer mon évier
+Grenoble
+4
+Looking for someone to fix my sink
 fini
 image1.jpg
 Annonce 3
-loin
-85
 12
-ci la première petite description
+Far away
+85
+a short description
 encours
 image1.jpg
 Annonce 4
-tout près
 1
+Near
 1
-ci la première petite description
+a second short description
 encours
 image12.jpg
 Annonce 5
-tout près2
 12
+Near
 12
-ci la première petite description2
+a last short description

@@ -13,8 +13,13 @@ body{
   /* background-color: #fff; */
   color: black;
 }
-h1, h2, h3, h4{
-  color: #009;
+h1, h2{
+  color: #f90;
+}
+h2{
+  padding: 0px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 section{
@@ -55,8 +60,12 @@ article h3{
   display: flex;
   flex-direction:row;
   justify-content: space-around;
-  border: 0.5px solid #d0d0d0;
+  border: 0.5px solid #fff;
   margin: 2%;
+  width: 80%;
+  height: 20%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .jobsSec div article div:first-child img{
   width: 100%;
@@ -69,6 +78,15 @@ article h3{
   float: left;
   display: flex;
   flex-direction: column;
+}
+.jobsSec div article div:last-child h2{
+  color: black;
+}
+.jobsSec div article div:last-child h3{
+  padding: 0px;
+}
+.jobsSec div article div:last-child h3 span{
+  color: #f90;
 }
 .jobsSec div article div:last-child{
   width: 70%;
