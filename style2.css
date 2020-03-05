@@ -37,10 +37,8 @@ nav ul{
 
 nav ul li{
   list-style-type: none;
-  /* color: #626262; */
   background-color: #fff;
   padding: 10px;
-  /* background-color: #ff9933; */
   text-decoration: none;
   border-right:  0.5px solid #626262;
   border-top:  0.5px solid #626262;

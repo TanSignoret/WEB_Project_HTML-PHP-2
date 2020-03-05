@@ -160,9 +160,7 @@
           }
         } ?>
         </div>
-        <?php
-        fclose($dataFile);
-        ?>
+        <?php fclose($dataFile); ?>
       </section>
       <?php
     } elseif ($nbPage === 3 ) {// && $connect=2?>
