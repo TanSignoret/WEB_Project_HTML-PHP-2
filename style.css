@@ -43,42 +43,45 @@ article h3{
   margin-left: -15px;
   /* width: 80%; */
   margin: auto;
-  /* flex-direction: column;
-  justify-content: space-between; */
+  /*justify-content: space-between; */
 }
 .jobsSec div{
   flex-wrap: wrap;
   display: flex;
   flex-direction: column;
 }
-.jobsSec div .jobs{
-  /* position: relative; */
+.jobsSec div article{
+  background-color: #fff;
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
+  justify-content: space-around;
   border: 0.5px solid #d0d0d0;
   margin: 2%;
 }
-.jobsSec div .jobs div:first-child{
+.jobsSec div article div:first-child{
   /* position: absolute; */
   width: 25%;
   height: auto;
+  float: left;
 }
-.jobsSec div .jobs div{
+.jobsSec div article div:last-child{
+  width: 70%;
+  float: right;
+  justify-content: center;
+}
+.jobsSec div article div{
   /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.jobsSec div .jobs div h3{
-  padding: .75rem 1.25rem;
-  background-color:rgba(0,0,0,.03);
-  border-bottom: 1px solid rgba(0,0,0,.125);
+.jobsSec div article div h3{
   justify-content: center;
 }
-.jobsSec div .jobs div img{
+.jobsSec div article div img{
   width: 20%;
 }
-.jobsSec div .jobs div p::after h3{
+.jobsSec div article div p::after h3{
   width: 70%;
 }
 /*pour la page client*/
