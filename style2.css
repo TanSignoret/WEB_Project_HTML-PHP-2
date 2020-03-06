@@ -44,11 +44,11 @@ nav ul li{
   border-top:  0.5px solid #626262;
   border-bottom:  0.5px solid #626262;
 }
-nav ul a li img{
+nav ul li a img{
   height: 30px;
   width: auto;
 }
-nav ul a li{
+nav ul li a{
   text-decoration: none;
   color: black;
 }
