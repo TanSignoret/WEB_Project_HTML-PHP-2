@@ -1,14 +1,14 @@
 5
 encours
 image1.png
-Jardinage
+Gardening
 35
 London
 2
 Find someone to trim the hedge in my garden
 encours
-image2.jpg
-Plomberie
+plumbing.jpg
+Plumbing
 12
 Grenoble
 4
