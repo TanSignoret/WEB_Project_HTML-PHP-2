@@ -62,14 +62,15 @@ article h3{
   justify-content: space-around;
   border: 0.5px solid #fff;
   margin: 2%;
-  width: 80%;
+  width: 60%;
   height: 20%;
   margin-right: auto;
   margin-left: auto;
 }
 .jobsSec div article div:first-child img{
-  width: 100%;
+  width: auto;
   height: auto;
+  margin: auto;
 }
 .jobsSec div article div:first-child{
   /* position: absolute; */
