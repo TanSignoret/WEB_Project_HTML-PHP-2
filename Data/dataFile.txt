@@ -20,14 +20,14 @@ Annonce 3
 Far away
 85
 a short description
-encours
+fini
 image1.jpg
 Annonce 4
 1
 Near
 1
 a second short description
-encours
+fini
 image12.jpg
 Annonce 5
 12
