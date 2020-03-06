@@ -133,7 +133,7 @@
     <?php
     } elseif ($nbPage === 2) { ?>
       <section class="jobsSec">
-        <h2>Annonces en Rhones - Alpes</h2>
+        <h2>Announcement : World</h2>
         <?php
         $dataFile = fopen("./Data/dataFile.txt", "r") or die("Unable to open file!");
         $lg = intval(fgets($dataFile)); ?>
