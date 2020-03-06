@@ -237,7 +237,8 @@
     <?php } ?>
     <footer>
       <h2>About us :</h2>
-      <p>Legals mentions : ...</p>
+      <p>Legals mentions : Today's Artisans Ⓒ Compagny</p>
+      <p>Web developper : Tanguy, Thomas, Flavien</p>
     </footer>
 	</body>
 </html>
