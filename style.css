@@ -68,7 +68,7 @@ article h3{
   margin-left: auto;
 }
 .jobsSec div article div:first-child img{
-  width: auto;
+  width: 100%;
   height: auto;
   margin: auto;
 }

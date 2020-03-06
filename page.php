@@ -143,9 +143,7 @@
             <article class="jobs">
                 <div>
                   <?php $img = trim(fgets($dataFile)); ?>
-                  <!-- <?php echo "./Data/image/image1.png" //"./Data/image/".$img; //image de l'annonce ?>-->
-                  <!-- <img src="./Data/image/plus.jpg.png" alt="Data/image/image1.png"> -->
-                  <img src="Data/image/image1.png" type="/image/png" alt="">
+                  <img src="Data/image/<?php echo $img;?>" type="/image/png" alt="">
                 </div>
                 <div>
                   <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
