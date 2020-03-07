@@ -39,29 +39,16 @@
      ?>
     <header>
       <div class="">
-    		<h1>Today's artisans</h1>
+        <a href="?">
+          <img src="/Data/image/icon.png" alt="icon">
+      		<h1>Today's artisans</h1>
+        </a>
         <nav>
           <ul>
-            <?php
-              if ($connect === 0) { ?>
-                <li><a class="home" href="?nbPage=0&amp;connect=0">Home Page</a></li>
-            <?php } else { ?>
-                <li><a class="home" href="?nbPage=0&amp;connect=1">Home Page</a></li>
-            <?php }
-              if ($connect === 1) { ?>
-                <li><a class="client" href="?nbPage=1&amp;connect=1">Client Page</a></li>
-              <?php }
-              if ($connect === 0) { ?>
-                <li><a class="jobs" href="?nbPage=2&amp;connect=0">Jobs - Artisans</a></li>
-            <?php } else { ?>
-                <li><a class="jobs" href="?nbPage=2&amp;connect=1">Jobs - Artisans</a></li>
-            <?php }
-              if ($connect === 0) { ?>
-                <li><a href="?nbPage=5"><img src="./Data/image/acount.jpg" alt="acount"></a></li>
-            <?php } else { ?>
-                <li><a href="?nbPage=5"><img src="./Data/image/acount.jpg" alt="acount"></a></li>
-            <?php } ?>
-
+            <a class="home" href="?nbPage=0&amp;<?php echo $connect; ?>"><li>Home Page</li></a>
+            <a class="client" href="?nbPage=1&amp;<?php echo $connect; ?>"><li>Client Page</li></a>
+            <a class="jobs" href="?nbPage=2&amp;<?php echo $connect; ?>"><li>Jobs - Add</li></a>
+            <a href="?nbPage=5&amp;<?php echo $connect; ?>"><li><img src="./Data/image/acount.jpg" alt="acount"></li></a>
           </ul>
         </nav>
       </div>
@@ -70,7 +57,7 @@
     if ($nbPage === 0) { ?>
       <section>
         <article class="presentation">
-          <h2>Our compagny :</h2>
+          <h2>Our company :</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </article>
         <article class="">
@@ -82,11 +69,7 @@
     } elseif ($nbPage === 1 && $connect === 1) { ?>
       <section>
         <article class="addContract">
-          <?php if ($connect === 1) { ?>
-            <a href="?nbPage=3&amp;connect=1">
-          <?php } else { ?>
-            <a href="?nbPage=3&amp;connect=0">
-          <?php } ?>
+          <a href="?nbPage=3&amp;<?php echo $connect; ?>">
             <img src="./Data/image/plus.jpg" alt="un plus">
             <h3>Add a contract</h3>
           </a>
@@ -100,10 +83,10 @@
         for ($i = 0; $i < $lg; ++$i) { ?>
           <article class="jobsCon">
             <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
-            <h3>Lieu : <?php echo fgets($dataFile); ?></h3>
+            <h3>Place : <?php echo fgets($dataFile); ?></h3>
             <div>
               <img src="" alt="./Data/image/<?php echo fgets($dataFile); //source de l'image?>">
-              <p>experiance : <?php echo fgets($dataFile); ?></p>
+              <p>Experiance : <?php echo fgets($dataFile); ?></p>
               <p><?php echo fgets($dataFile); //description de l'annonce ?></p>
             </div>
           </article>
@@ -113,21 +96,13 @@
         <article class="contractWainting">
           <img src="" alt="img artisans">
           <ul>
-            <li>note à artisant</li>
-            <li>"note de l'artisant"</li>
+            <li>Mark artisan</li>
+            <li>Mark from artisant</li>
           </ul>
         </article>
 
         <aside class="your info">
-          <h3>Your info :</h3>
-          <ul>
-            <li>Nom :</li>
-            <li>Prenom :</li>
-            <li>Adresse :</li>
-            <li>Tel :</li>
-            <li>Email :</li>
-            <li>Notes :</li>
-          </ul>
+          <a href="?nbPage="></a>
         </aside>
       </section>
     <?php
@@ -148,8 +123,8 @@
                 <div>
                   <h2><?php echo fgets($dataFile); //titre de l'annonce ?></h2>
                   <h3><span><?php echo fgets($dataFile);//rémunération?> €</span> / hour</h3>
-                  <p>Where : <?php echo fgets($dataFile); //lieu de l'annonce ?></p>
-                  <p>Experiance needed : <?php echo fgets($dataFile); //experiance dem&&é?></p>
+                  <p>Place : <?php echo fgets($dataFile); //lieu de l'annonce ?></p>
+                  <p>Experience needed : <?php echo fgets($dataFile); //experiance dem&&é?></p>
                   <p><?php echo fgets($dataFile); //description?></p>
                 </div>
             </article><?php
@@ -165,29 +140,32 @@
       <?php
     } elseif ($nbPage === 3 ) {// && $connect=2?>
       <h2>Creer une annonce</h2>
-      <form class="" action="page.php?addannonce=1&amp;nbPage=0&amp;connect=0>" method="get">
-        <label for="titre">Quel est le nom de votre annonce :</label>
-        <input type="text" name="titre" value="Jardinage"><br>
-        <label for="lieu">Quel est le lieu de votre annonce :</label>
-        <input type="text" name="lieu" value="Paris"><br>
-        <label for="img">Upload une image</label>
-        <input type="text" name="img" value="Jardinage"><br>
+      <form class="" action="?" method="get">
+        <label for="title">Title of your add :</label>
+        <input type="text" name="title" value="Gardenning"><br>
+        <label for="where">Where it is :</label>
+        <input type="text" name="where" value="Paris"><br>
+        <label for="img">Upload a image</label>
+        <input type="image" name="img" value="image.jpg"><br>
         <label for="exp">Quel est l'experiance requise pour répondre à votre annonce :</label>
         <input type="number" name="exp" value="1"><br>
         <label for="px">Quel est la rémunération de votre annonce :</label>
         <input type="number" name="px" value="0 €"><br>
+        <input class="hide" type="number" name="connect" value="0">
+        <input class="hide" type="number" name="nbPage" value="0">
+        <input class="hide" type="number" name="addannonce" value="1">
         <input type="submit" value="Connect">
       </form>
     <?php
     } elseif ($nbPage === 5 && $connect === 0) { ?>
       <section>
         <article class="login">
-          <h2>Vous avez déjà un compte : conectez-vous :</h2>
+          <h2>You have a account : connect you :</h2>
           <form action="?nbPage=7&amp;connect=1" method="post">
             <label for="lg">Login :</label>
-            <input type="text" name="lg" value="tutu"><br><br>
+            <input type="text" name="lg" value="yolo"><br><br>
             <label for="pwd">Password :</label>
-            <input type="password" name="pwd" value="un mot de passe"><br><br>
+            <input type="password" name="pwd" value="password"><br><br>
             <input type="submit" value="Connect"><br>
           </form>
         </article>
@@ -225,20 +203,30 @@
       <section>
         <article class="our info">
           <h2>Edit your infos :</h2>
-          <?php $profileFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w"); ?>
-          <form class="" action="index.html" method="get">
+          <?php
+          //recupération du nom d'utilisateur via $_SESSION
+          $nomUtilisateur = 'Tanguy';
+          $profileFileUs = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "r");
+          ?>
+          <form class="" action="?" method="get">
             <label for="name">Name : </label>
             <input type="text" name="name" value="<?php echo fgets($dataFile); ?>"><br>
-            <input type="submit" value="Disconnect">
-
+            <label for="fn">First name : </label>
+            <input type="text" name="fn" value="<?php echo fgets($dataFile); ?>"><br>
+            <label for="ad">Adresse : </label>
+            <input type="text" name="ad" value="<?php echo fgets($dataFile); ?>"><br>
+            <label for="tel">Phone : </label>
+            <input type="tel" name="tel" value="<?php echo fgets($dataFile); ?>"><br>
+            <label for="mail">Email : </label>
+            <input type="email" name="mail" value="<?php echo fgets($dataFile); ?>"><br>
+            <input class="hide" type="number" name="connect" value="1">
+            <input class="hide" type="number" name="nbPage" value="0">
+            <input type="submit" value="Save">
           </form>
-          <ul>
-            <li>Name :</li>
-            <li>First name :</li>
-            <li>Adresse :</li>
-            <li>Phone :</li>
-            <li>Email :</li>
-          </ul>
+          <?php fclose($profileFileUs); ?>
+          <form class="" action="?nbPage=0&amp;connect=0" method="get">
+            <input type="submit" value="Disconnect">
+          </form>
         </article>
       </section>
     <?php } ?>
