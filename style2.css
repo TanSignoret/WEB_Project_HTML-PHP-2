@@ -10,8 +10,11 @@ header div{
   display: flex;
   justify-content: space-between;
 }
-header div h1{
-  /* color: #626262; */
+header div a{
+  display: flex;
+  flex-direction: row;
+}
+header div a h1{
   text-align: center;
   height: 5%;
   margin-top: auto;
@@ -20,7 +23,7 @@ header div h1{
 }
 /*je n'arrive pas à récuidre l'image du compte*/
 /* a faire ..*/
-header div a{
+header div a img{
   max-width: 5px;
   height: auto;
 }

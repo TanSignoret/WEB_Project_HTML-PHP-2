@@ -15,6 +15,7 @@
     $nbPage = 0;
     ?>
 	</head>
+  
 	<body>
     <?php
     if (isset($_GET['nbPage'])) {
