@@ -1,10 +1,16 @@
 header{
+  width: 100%;
+  background-color: #fff;
+}
+header div{
+  width: 90%;
+  margin: auto;
   height: 10%;
   text-align: center;
   display: flex;
   justify-content: space-between;
 }
-header h1{
+header div h1{
   /* color: #626262; */
   text-align: center;
   height: 5%;
@@ -14,14 +20,13 @@ header h1{
 }
 /*je n'arrive pas à récuidre l'image du compte*/
 /* a faire ..*/
-header a{
+header div a{
   max-width: 5px;
   height: auto;
 }
 
 nav ul{
   display: flex;
-  margin-left: 2%;
   list-style-type: none;
   align-content: space-between;
   text-align: center;
@@ -32,18 +37,24 @@ nav ul{
 
 nav ul li{
   list-style-type: none;
-  /* color: #626262; */
-  background-color: black;
+  background-color: #fff;
   padding: 10px;
-  /* background-color: #ff9933; */
   text-decoration: none;
   border-right:  0.5px solid #626262;
   border-top:  0.5px solid #626262;
   border-bottom:  0.5px solid #626262;
 }
+nav ul li a img{
+  height: 30px;
+  width: auto;
+}
 nav ul li a{
   text-decoration: none;
-  color: #f90;
+  color: black;
+}
+
+h1 a{
+  text-decoration: none;
 }
 
 nav ul li:first-child{
@@ -51,9 +62,9 @@ nav ul li:first-child{
 }
 
 nav ul li:hover{
-  background-color: #262626;
+  background-color: #d0d0d0;
 }
 
 nav ul li:hover a{
-  color: #f90;
+  color: black;
 }

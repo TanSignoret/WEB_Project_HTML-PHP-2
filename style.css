@@ -1,15 +1,25 @@
+html{
+  background-color: #595959;
+  display: flex;
+  flex-direction: column;
+}
 body{
-  font-style: Times, Serif;
+  font-family: sans-serif;
   font-size: 1em;
   margin: 0px;
   align: center;
-  width: 90%;
+  width: 100%;
   margin: auto;
-  background-color: black;
+  /* background-color: #fff; */
+  color: black;
+}
+h1, h2{
   color: #f90;
 }
-h1, h2, h3, h4{
-  color: #009;
+h2{
+  padding: 0px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 section{
@@ -19,7 +29,7 @@ section{
   margin: auto;
   display: flex;
   flex-direction: column;
-  /* background-color: #000066; */
+  /* background-color: #595959; */
 }
 article{
   /* border: 2px solid red ; */
@@ -34,26 +44,69 @@ article h3{
 }
 /*uniquement pour la page jobs*/
 .jobsSec{
+  margin-right: -15px;
+  margin-left: -15px;
+  /* width: 80%; */
+  margin: auto;
+  /*justify-content: space-between; */
+}
+.jobsSec div{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+}
+.jobsSec div article{
+  background-color: #fff;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  border: 0.5px solid #fff;
+  margin: 2%;
+  width: 60%;
+  height: 20%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.jobsSec div article div:first-child img{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.jobsSec div article div:first-child{
+  /* position: absolute; */
+  width: 25%;
+  height: auto;
+  float: left;
+  display: flex;
+  flex-direction: column;
+}
+.jobsSec div article div:last-child h2{
+  color: black;
+}
+.jobsSec div article div:last-child h3{
+  padding: 0px;
+}
+.jobsSec div article div:last-child h3 span{
+  color: #f90;
+}
+.jobsSec div article div:last-child{
+  width: 70%;
+  float: right;
+  justify-content: center;
+}
+.jobsSec div article div{
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-section .jobs{
-  border: 0.5px solid white;
-  width: 80%;
-  margin: auto;
-}
-section .jobs h3{
+.jobsSec div article div h3{
   justify-content: center;
 }
-section .jobs div{
-  display: flex;
-  justify-content: space-between;
-}
-section .jobs img{
+.jobsSec div article div img{
   width: 20%;
 }
-section .jobs p::after h3{
+.jobsSec div article div p::after h3{
   width: 70%;
 }
 /*pour la page client*/
@@ -61,7 +114,7 @@ section .addContract{
   width: 450px;
   height: 70px;
   margin: auto;
-  border: 0.5px solid white;
+  border: 0.5px solid #d0d0d0;
   float: left;
 }
 section .addContract a{
@@ -89,7 +142,7 @@ form input{
   border-radius: 4px;
   background-color: black;
   resize: none;
-  color: #f90;
+  color: #f2764e;
 }
 /* form{
   display: flex;
@@ -102,4 +155,6 @@ form .hide{
 /*part of style sheet for footer*/
 footer{
   text-align: justify;
+  width: 90%;
+  margin: auto;
 }
