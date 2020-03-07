@@ -11,7 +11,7 @@ body{
   width: 100%;
   margin: auto;
   /* background-color: #fff; */
-  color: black;
+  color: white;
 }
 h1, h2{
   color: #f90;
@@ -144,10 +144,7 @@ form input{
   resize: none;
   color: #f2764e;
 }
-/* form{
-  display: flex;
-  justify-content: center;
-} */
+
 form .hide{
   display: none;
 }

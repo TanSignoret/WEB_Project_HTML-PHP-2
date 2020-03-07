@@ -35,7 +35,7 @@ nav ul{
   padding-left: 0px;
 }
 
-nav ul li{
+nav ul a li{
   list-style-type: none;
   background-color: #fff;
   padding: 10px;
@@ -44,27 +44,24 @@ nav ul li{
   border-top:  0.5px solid #626262;
   border-bottom:  0.5px solid #626262;
 }
-nav ul li a img{
+nav ul a li img{
   height: 30px;
   width: auto;
 }
-nav ul li a{
+nav ul a{
   text-decoration: none;
   color: black;
 }
 
-h1 a{
+header a{
   text-decoration: none;
 }
 
-nav ul li:first-child{
+nav ul a li:first-child{
   border-left:  0.5px solid #626262;
 }
 
-nav ul li:hover{
+nav ul a li:hover{
   background-color: #d0d0d0;
-}
-
-nav ul li:hover a{
   color: black;
 }
