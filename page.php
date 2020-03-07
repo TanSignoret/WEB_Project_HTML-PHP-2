@@ -27,7 +27,7 @@
     }
     if (isset($_GET['titre']) and isset($_GET['annonce'])) {
       $nomUtilisateur = htmlentities($_GET['nomuser']);
-      $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w"); // or die("Unable to open file!");
+      $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w");
       file_put_contents($dataFile, htmlentities($_GET['titre']), FILE_APPEND);
     } elseif (isset($_GET['nomUtilisateur'])) {
       $nomUtilisateur = htmlentities($_GET['nomuser']);
@@ -149,7 +149,6 @@
             for ($i=0; $i <= 6; $i++) {
               fgets($dataFile);
             }
-            echo "coucou";
           }
         }
         fclose($dataFile);
@@ -216,15 +215,22 @@
     <?php
   } elseif ($nbPage == 7 and $connect == 1) { ?>
       <section>
-        <article class="">
-          <h2>Your info</h2>
-          <!-- <?php  ?> affiche les info du login-->
-          <p>Moi</p>
-        </article>
-        <article class="">
-          <form class="" action="?connect=0" method="post">
+        <article class="our info">
+          <h2>Edit your infos :</h2>
+          <?php $profileFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w"); ?>
+          <form class="" action="index.html" method="get">
+            <label for="name">Name : </label>
+            <input type="text" name="name" value="<?php echo fgets($dataFile); ?>"><br>
             <input type="submit" value="Disconnect">
+
           </form>
+          <ul>
+            <li>Name :</li>
+            <li>First name :</li>
+            <li>Adresse :</li>
+            <li>Phone :</li>
+            <li>Email :</li>
+          </ul>
         </article>
       </section>
     <?php } ?>
