@@ -15,7 +15,7 @@
     $nbPage = 0;
     ?>
 	</head>
-  
+
 	<body>
     <?php
     if (isset($_GET['nbPage'])) {
@@ -41,7 +41,7 @@
     <header>
       <div class="">
         <a href="?">
-          <img src="/Data/image/icon.png" alt="icon">
+          <img src="Data/image/icon.png" type="/image/png" alt="icon">
       		<h1>Today's artisans</h1>
         </a>
         <nav>
