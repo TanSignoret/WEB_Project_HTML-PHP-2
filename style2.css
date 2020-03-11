@@ -15,13 +15,16 @@ header div{
   flex-direction: row;
 }
 header div a{
-  height: 5%;
+  height: 20%;
 }
-/*je n'arrive pas à récuidre l'image du compte*/
-/* a faire ..*/
+
 header div a img{
-  max-width: 5%;
+  max-width: 100%;
   height: auto;
+}
+
+header nav{
+  height: 20%;
 }
 
 nav ul{
