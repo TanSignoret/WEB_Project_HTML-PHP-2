@@ -46,12 +46,12 @@
         </a>
         <nav>
           <ul>
-            <a class="home" href="?nbPage=0&amp;<?php echo $connect; ?>"><li>Home Page</li></a>
+            <a class="home" href="?nbPage=0&amp;connect=<?php echo $connect; ?>"><li>Home Page</li></a>
             <?php if($connect === 1){ ?>
-              <a class="client" href="?nbPage=1&amp;<?php echo $connect; ?>"><li>Client Page</li></a>
+              <a class="client" href="?nbPage=1&amp;connect=<?php echo $connect; ?>"><li>Client Page</li></a>
             <?php } ?>
-            <a class="jobs" href="?nbPage=2&amp;<?php echo $connect; ?>"><li>Jobs - Add</li></a>
-            <a href="?nbPage=5&amp;<?php echo $connect; ?>"><li><img src="./Data/image/acount.jpg" alt="acount"></li></a>
+            <a class="jobs" href="?nbPage=2&amp;connect=<?php echo $connect; ?>"><li>Jobs - Add</li></a>
+            <a href="?nbPage=5&amp;connect=<?php echo $connect; ?>"><li><img src="./Data/image/acount.jpg" alt="acount"></li></a>
           </ul>
         </nav>
       </div>
