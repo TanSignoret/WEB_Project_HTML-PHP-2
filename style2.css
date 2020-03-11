@@ -15,7 +15,7 @@ header div{
   flex-direction: row;
 }
 header div a img{
-  height: 100%;
+  max-height: 2%;
 }
 header div a h1{
   text-align: center;
