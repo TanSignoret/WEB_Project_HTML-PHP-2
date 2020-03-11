@@ -20,7 +20,7 @@ header div a{
 /*je n'arrive pas à récuidre l'image du compte*/
 /* a faire ..*/
 header div a img{
-  max-width: 5px;
+  max-width: 5%;
   height: auto;
 }
 
@@ -45,20 +45,16 @@ nav ul a{
   border-top:  0.5px solid #626262;
   border-bottom:  0.5px solid #626262;
 }
-<<<<<<< HEAD
 nav ul a li{
   width: 100%;
 }
-nav ul a li img{
-=======
 nav ul:last-child a li{
   width: 100%;
 }
-/* nav ul a li img{
->>>>>>> ff2ec3d880317273efd14b5891a7ec5fbf31a6c8
+nav ul a li img{
   height: 30px;
   width: auto;
-} */
+}
 nav ul a{
   text-decoration: none;
   color: black;
