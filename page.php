@@ -42,7 +42,7 @@
       <div class="">
         <a href="?">
           <img src="Data/image/icon.png" type="/image/png" alt="icon">
-      		<h1>Today's artisans</h1>
+          <img src="Data/image/todaysArtisans.png" type="/image/png" alt="icon">
         </a>
         <nav>
           <ul>
