@@ -10,9 +10,12 @@ header div{
   display: flex;
   justify-content: space-between;
 }
-header div a{
+header div{
   display: flex;
   flex-direction: row;
+}
+header div a img{
+  height: 100%;
 }
 header div a h1{
   text-align: center;
@@ -49,13 +52,20 @@ nav ul a{
   border-top:  0.5px solid #626262;
   border-bottom:  0.5px solid #626262;
 }
+<<<<<<< HEAD
 nav ul a li{
   width: 100%;
 }
 nav ul a li img{
+=======
+nav ul:last-child a li{
+  width: 100%;
+}
+/* nav ul a li img{
+>>>>>>> ff2ec3d880317273efd14b5891a7ec5fbf31a6c8
   height: 30px;
   width: auto;
-}
+} */
 nav ul a{
   text-decoration: none;
   color: black;
@@ -67,11 +77,11 @@ header a{
   flex-direction: row;
 }
 
-nav ul a li:first-child{
+nav ul a:first-child{
   border-left:  0.5px solid #626262;
 }
 
-nav ul a li:hover{
+nav ul a:hover{
   background-color: #d0d0d0;
   color: black;
 }
