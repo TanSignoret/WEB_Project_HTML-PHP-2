@@ -17,19 +17,12 @@ header div{
 header div a{
   height: 5%;
 }
-header div a h1{
-  text-align: center;
-  height: 5%;
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: 2em;
-}
 /*je n'arrive pas à récuidre l'image du compte*/
 /* a faire ..*/
-/* header div a img{
+header div a img{
   max-width: 5px;
   height: auto;
-} */
+}
 
 nav ul{
   display: flex;
