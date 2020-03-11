@@ -23,10 +23,10 @@ header div a h1{
 }
 /*je n'arrive pas à récuidre l'image du compte*/
 /* a faire ..*/
-header div a img{
+/* header div a img{
   max-width: 5px;
   height: auto;
-}
+} */
 
 nav ul{
   display: flex;
@@ -48,6 +48,9 @@ nav ul a{
   border-right:  0.5px solid #626262;
   border-top:  0.5px solid #626262;
   border-bottom:  0.5px solid #626262;
+}
+nav ul a li{
+  width: 100%;
 }
 nav ul a li img{
   height: 30px;
