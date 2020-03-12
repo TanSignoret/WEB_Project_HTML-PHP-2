@@ -5,9 +5,10 @@
 		<title>Today's artisans</title>
     <link rel="icon" type="/image/png" href="Data/image/icon.png">
 		<link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="style2.css">
+		<link rel="stylesheet" href="styleHead.css">
     <!-- <link rel="stylesheet" href="//static-rav.leboncoin.fr/app.a04675c733cc033ee8f9.css"> -->
     <?php
+    session_start();
     /*
     $connect = 0 => pas de connection
     $connect = 1 => connection en arrière plan
@@ -23,35 +24,50 @@
     } else {
       $nbPage = 0;
     }
-    if (isset($_GET['connect'])) {
-      $connect = intval(htmlentities($_GET['connect']));
+    if (isset($_SESSION['connect'])) {
+      $connect = intval($_SESSION['connect']);
     } else {
       $connect = 0;
     }
-    if (isset($_GET['titre']) && isset($_GET['annonce'])) {
-      $nomUtilisateur = htmlentities($_GET['nomuser']);
+    if (isset($_SESSION['titre']) && isset($_SESSION['annonce'])) {
+      $nomUtilisateur = $_SESSION['nomuser'];
       $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w");
-      file_put_contents($dataFile, htmlentities($_GET['titre']), FILE_APPEND);
-    } elseif (isset($_GET['nomUtilisateur'])) {
-      $nomUtilisateur = htmlentities($_GET['nomuser']);
-      $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w"); // or die("Unable to open file!");
-      file_put_contents($dataFile, htmlentities($_GET['titre']), FILE_APPEND);
+      file_put_contents($dataFile, $_SESSION['titre'], FILE_APPEND);
+    }
+    if (isset($_GET['titre']) && isset($_GET['annonce']) && isset($_GET['name'])) {
+      $nomUtilisateur = $_GET['name'];
+      $_SESSION['nomuser'] = $nomUtilisateur;
+      $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w");
+      file_put_contents($dataFile, $_GET['titre'], FILE_APPEND);
+    } elseif (isset($_GET['name'])) {
+      $nomUtilisateur = $_GET['name'];
+      ?><p><?php echo $nomUtilisateur; ?></p><?php
+      $_SESSION['nomuser'] = $nomUtilisateur;
+      /*probleme dans l'écriture des fichiers*/
+      $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "xb") or die("Unable to open file!");
+      chmod('./Data/dataFile'.$nomUtilisateur.'.txt',777);
+      fwrite($dataFile, $_GET['name'] .'\n');
+      fwrite($dataFile, $_GET['first'] .'\n');
+      fwrite($dataFile, $_GET['adresse'] .'\n');
+      fwrite($dataFile, $_GET['email'] .'\n');
+      fwrite($dataFile, $_GET['number'] .'\n');
+      fclose($dataFile);
     }
      ?>
     <header>
       <div class="">
-        <a href="?">
-          <img src="Data/image/icon.png" type="/image/png" alt="icon">
-          <img src="Data/image/todaysArtisans.png" type="/image/png" alt="icon">
+        <a href="?nbPage=0"<?php $_SESSION["connect"] = $connect; $_SESSION["nbPage"] = 0; ?>>
+          <!-- <img src="Data/image/todaysArtisans.png" type="/image/png" alt="icon"> -->
+          <h1><span>Today's</span><span> Artisans</span></h1>
         </a>
         <nav>
           <ul>
-            <a class="home" href="?nbPage=0&amp;connect=<?php echo $connect; ?>"><li>Home Page</li></a>
+            <a class="home" href="?nbPage=0"<?php $_SESSION["connect"]=$connect; $_SESSION["nbPage"] = 0; ?>><li>Home Page</li></a>
             <?php if($connect === 1){ ?>
-              <a class="client" href="?nbPage=1&amp;connect=<?php echo $connect; ?>"><li>Client Page</li></a>
+              <a class="client" href="?nbPage=1"<?php $_SESSION["connect"]=$connect; $_SESSION["nbPage"]=1; ?>><li>Client Page</li></a>
             <?php } ?>
-            <a class="jobs" href="?nbPage=2&amp;connect=<?php echo $connect; ?>"><li>Jobs - Add</li></a>
-            <a href="?nbPage=5&amp;connect=<?php echo $connect; ?>"><li><img src="./Data/image/acount.jpg" alt="acount"></li></a>
+            <a class="jobs" href="?nbPage=2"<?php $_SESSION["connect"]=$connect; $_SESSION["nbPage"]=2; ?>><li>Jobs - Add</li></a>
+            <a href="?nbPage=5"<?php $_SESSION["connect"]=$connect; $_SESSION["nbPage"]=5; ?>><li><img src="./Data/image/acount.jpg" alt="acount"></li></a>
           </ul>
         </nav>
       </div>
@@ -80,6 +96,7 @@
 
         <h2>Not completed contract :</h2>
         <?php
+        // $nomUtilisateur = $_SESSION["connect"];
         $nomUtilisateur = 'Tanguy';
         $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "r"); // or die("Unable to open file!");
         $lg = intval(fgets($dataFile));
@@ -105,7 +122,7 @@
         </article>
 
         <aside class="your info">
-          <a href="?nbPage="></a>
+          <a href="?"<?php $_SESSION["connect"] = $connect; $_SESSION["nbPage"] = 7; ?>>Your info</a>
         </aside>
       </section>
     <?php
@@ -164,18 +181,21 @@
       <section>
         <article class="login">
           <h2>You have a account : connect you :</h2>
-          <form action="?nbPage=7&amp;connect=1" method="post">
+          <form action="?nbPage=0" method="get">
             <label for="lg">Login :</label>
             <input type="text" name="lg" value="yolo"><br><br>
             <label for="pwd">Password :</label>
             <input type="password" name="pwd" value="password"><br><br>
+            <input class="hide" type="number" name="nbPage" value="0">
             <input type="submit" value="Connect"><br>
+            <?php $_SESSION['connect'] = 1 ?>
           </form>
         </article>
         <article class="">
           <h3>You haven't het a acount. Create you one :</h3>
-          <form action="?nbPage=7&amp;connect=0" method="post">
+          <form action="?nbPage=7" method="post">
             <input type="submit" value="Create a new acount"><br>
+            <?php $_SESSION['connect'] = 0 ?>
           </form>
         </article>
       </section>
@@ -186,23 +206,23 @@
           <h2>Create a acount</h2>
           <form class="" action="?" method="get">
             <label for="name">Enter your name : </label>
-            <input type="text" name="name" value="Signoret"><br>
+            <input type="text" name="name" value="Name"><br>
             <label for="first">Enter your first name : </label>
-            <input type="text" name="first" value="Tanguy"><br>
+            <input type="text" name="first" value="First name"><br>
             <label for="first">Enter your adresse : </label>
-            <input type="text" name="adresse" value="Voiron"><br>
+            <input type="text" name="adresse" value="Adresse"><br>
             <label for="first">Enter your email-adresse : </label>
-            <input type="email" name="email" value="tanguy.signoret@gmail.com"><br>
+            <input type="email" name="email" value="Email"><br>
             <label for="first">Enter your phone number : </label>
-            <input type="tel" name="number" value="0102030405"><br>
-            <input class="hide" type="number" name="connect" value="1">
+            <input type="tel" name="number" value="Phone"><br>
             <input class="hide" type="number" name="nbPage" value="0">
             <input type="submit" value="Connect">
+            <?php $_SESSION['connect'] = 1 ?>
           </form>
         </article>
       </section>
     <?php
-  } elseif ($nbPage === 7 && $connect === 1) { ?>
+  } elseif ($nbPage === 5 && $connect === 1) { ?>
       <section>
         <article class="our info">
           <h2>Edit your infos :</h2>
@@ -213,22 +233,28 @@
           ?>
           <form class="" action="?" method="get">
             <label for="name">Name : </label>
-            <input type="text" name="name" value="<?php echo fgets($dataFile); ?>"><br>
+            <?php $var = fgets($profileFileUs); ?>
+            <input type="text" name="name" value="<?php echo $var ?>"><br>
             <label for="fn">First name : </label>
-            <input type="text" name="fn" value="<?php echo fgets($dataFile); ?>"><br>
+            <?php $var = fgets($profileFileUs); ?>
+            <input type="text" name="fn" value="<?php echo $var ?>"><br>
             <label for="ad">Adresse : </label>
-            <input type="text" name="ad" value="<?php echo fgets($dataFile); ?>"><br>
+            <?php $var = fgets($profileFileUs); ?>
+            <input type="text" name="ad" value="<?php echo $var ?>"><br>
             <label for="tel">Phone : </label>
-            <input type="tel" name="tel" value="<?php echo fgets($dataFile); ?>"><br>
+            <?php $var = fgets($profileFileUs); ?>
+            <input type="tel" name="tel" value="<?php echo $var ?>"><br>
             <label for="mail">Email : </label>
-            <input type="email" name="mail" value="<?php echo fgets($dataFile); ?>"><br>
-            <input class="hide" type="number" name="connect" value="1">
+            <?php $var = fgets($profileFileUs); ?>
+            <input type="email" name="mail" value="<?php echo $var ?>"><br>
             <input class="hide" type="number" name="nbPage" value="0">
             <input type="submit" value="Save">
+            <!-- <?php $_SESSION['connect'] = 1 ?> -->
           </form>
           <?php fclose($profileFileUs); ?>
-          <form class="" action="?nbPage=0&amp;connect=0" method="get">
+          <form class="" action="?nbPage=0" method="get">
             <input type="submit" value="Disconnect">
+            <?php $_SESSION['connect'] = 0 ?>
           </form>
         </article>
       </section>
@@ -236,7 +262,7 @@
     <footer>
       <h2>About us :</h2>
       <p>Legals mentions : Today's Artisans Ⓒ Compagny</p>
-      <p>Web developper : Tanguy, Thomas, Flavien</p>
+      <p>Web developpers : Tanguy, Thomas, Flavien</p>
     </footer>
 	</body>
 </html>

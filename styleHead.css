@@ -5,29 +5,33 @@ header{
 header div{
   width: 90%;
   margin: auto;
-  height: 10%;
-  text-align: center;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
 }
-header div{
+/*temporaire le temps que j'arrive avec l'image*/
+header div:first-child h1 span:last-of-type{
+  color: #595959;
+  background-color: #f90;
+}
+header div:first-child h1 span:first-of-type{
+  color: #f90;
+  background-color: #595959;
+}
+header div:first-child{
+  height: 100px;
   display: flex;
   flex-direction: row;
 }
-header div a{
+header div a:first-child img{
   height: 20%;
 }
 
-header div a img{
-  max-height: 40px;
-  height: auto;
+header div nav{
+  /* height: 20%; */
 }
 
-header nav{
-  height: 20%;
-}
-
-nav ul{
+header div nav ul{
   display: flex;
   list-style-type: none;
   align-content: space-between;
@@ -37,28 +41,28 @@ nav ul{
   padding-left: 0px;
 }
 
-nav ul a li{
+header div nav ul a li{
   list-style-type: none;
 }
 
-nav ul a{
+header div nav ul a{
   background-color: #fff;
   padding: 10px;
   border-right:  0.5px solid #626262;
   border-top:  0.5px solid #626262;
   border-bottom:  0.5px solid #626262;
 }
-nav ul a li{
+header div nav ul a li{
   width: 100%;
 }
-nav ul:last-child a li{
+header div nav ul:last-child a li{
   width: 100%;
 }
-nav ul a li img{
+header div nav ul a li img{
   height: 30px;
   width: auto;
 }
-nav ul a{
+header div nav ul a{
   text-decoration: none;
   color: black;
 }
@@ -69,7 +73,7 @@ header a{
   flex-direction: row;
 }
 
-nav ul a:first-child{
+header div nav ul a:first-child{
   border-left:  0.5px solid #626262;
 }
 

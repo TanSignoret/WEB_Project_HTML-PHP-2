@@ -23,13 +23,11 @@ h2{
 }
 
 section{
-  /* border: 2px solid green ; */
   text-align: center;
   width: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
-  /* background-color: #595959; */
 }
 article{
   /* border: 2px solid red ; */
