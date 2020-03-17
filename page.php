@@ -6,7 +6,6 @@
     <link rel="icon" type="/image/png" href="Data/image/icon.png">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="styleHead.css">
-    <!-- <link rel="stylesheet" href="//static-rav.leboncoin.fr/app.a04675c733cc033ee8f9.css"> -->
     <?php
     session_start();
     /*
@@ -39,13 +38,14 @@
       $_SESSION['nomuser'] = $nomUtilisateur;
       $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w");
       file_put_contents($dataFile, $_GET['titre'], FILE_APPEND);
-    } elseif (isset($_GET['name'])) {
+    }
+    if (isset($_GET['name']) && isset($_GET['email'])) {
       $nomUtilisateur = $_GET['name'];
       ?><p><?php echo $nomUtilisateur; ?></p><?php
       $_SESSION['nomuser'] = $nomUtilisateur;
       /*probleme dans l'écriture des fichiers*/
-      $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "xb") or die("Unable to open file!");
       chmod('./Data/dataFile'.$nomUtilisateur.'.txt',777);
+      $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w") or die("Unable to open file!");
       fwrite($dataFile, $_GET['name'] .'\n');
       fwrite($dataFile, $_GET['first'] .'\n');
       fwrite($dataFile, $_GET['adresse'] .'\n');
@@ -187,6 +187,7 @@
             <label for="pwd">Password :</label>
             <input type="password" name="pwd" value="password"><br><br>
             <input class="hide" type="number" name="nbPage" value="0">
+            <input class="hide" type="number" name="connect" value="1">
             <input type="submit" value="Connect"><br>
             <?php $_SESSION['connect'] = 1 ?>
           </form>
@@ -195,6 +196,7 @@
           <h3>You haven't het a acount. Create you one :</h3>
           <form action="?nbPage=7" method="post">
             <input type="submit" value="Create a new acount"><br>
+            <input class="hide" type="number" name="connect" value="0">
             <?php $_SESSION['connect'] = 0 ?>
           </form>
         </article>
@@ -216,6 +218,7 @@
             <label for="first">Enter your phone number : </label>
             <input type="tel" name="number" value="Phone"><br>
             <input class="hide" type="number" name="nbPage" value="0">
+            <input class="hide" type="number" name="connect" value="1">
             <input type="submit" value="Connect">
             <?php $_SESSION['connect'] = 1 ?>
           </form>
@@ -249,7 +252,7 @@
             <input type="email" name="mail" value="<?php echo $var ?>"><br>
             <input class="hide" type="number" name="nbPage" value="0">
             <input type="submit" value="Save">
-            <!-- <?php $_SESSION['connect'] = 1 ?> -->
+            <?php $_SESSION['connect'] = 1 ?>
           </form>
           <?php fclose($profileFileUs); ?>
           <form class="" action="?nbPage=0" method="get">
