@@ -182,8 +182,8 @@
         <article class="login">
           <h2>You have a account : connect you :</h2>
           <form action="?" method="get">
-            <label for="lg">Login :</label>
-            <input type="text" name="lg" value="yolo"><br><br>
+            <label for="name">Login :</label>
+            <input type="text" name="name" value="yolo"><br><br>
             <label for="pwd">Password :</label>
             <input type="password" name="pwd" value="password"><br><br>
             <input class="hide" type="number" name="nbPage" value="0">
