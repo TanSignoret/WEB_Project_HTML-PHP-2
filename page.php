@@ -44,14 +44,13 @@
       // ?><p><?php echo $nomUtilisateur; ?></p><?php
       $_SESSION['nomuser'] = $nomUtilisateur;
       /*probleme dans l'écriture des fichiers*/
-      chmod('./Data/dataFile'.$nomUtilisateur.'.txt',777);
-      $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w") or die("Unable to open file!");
-      fwrite($dataFile, $_GET['name'] .'\n');
-      fwrite($dataFile, $_GET['first'] .'\n');
-      fwrite($dataFile, $_GET['adresse'] .'\n');
-      fwrite($dataFile, $_GET['email'] .'\n');
-      fwrite($dataFile, $_GET['number'] .'\n');
-      fclose($dataFile);
+      // chmod('./Data/dataFile'.$nomUtilisateur.'.txt',777);
+      $dataFile = './Data/dataFile'.$nomUtilisateur.'.txt';
+      file_put_contents($dataFile, $_GET['name'] .'\n');
+      file_put_contents($dataFile, $_GET['first'] .'\n',FILE_APPEND);
+      file_put_contents($dataFile, $_GET['adresse'] .'\n',FILE_APPEND);
+      file_put_contents($dataFile, $_GET['email'] .'\n',FILE_APPEND);
+      file_put_contents($dataFile, $_GET['number'] .'\n',FILE_APPEND);
     }
      ?>
     <header>
