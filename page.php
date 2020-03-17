@@ -41,7 +41,7 @@
     }
     if (isset($_GET['name']) && isset($_GET['email'])) {
       $nomUtilisateur = $_GET['name'];
-      ?><p><?php echo $nomUtilisateur; ?></p><?php
+      // ?><p><?php echo $nomUtilisateur; ?></p><?php
       $_SESSION['nomuser'] = $nomUtilisateur;
       /*probleme dans l'écriture des fichiers*/
       chmod('./Data/dataFile'.$nomUtilisateur.'.txt',777);
@@ -181,7 +181,7 @@
       <section>
         <article class="login">
           <h2>You have a account : connect you :</h2>
-          <form action="?nbPage=0" method="get">
+          <form action="?" method="get">
             <label for="lg">Login :</label>
             <input type="text" name="lg" value="yolo"><br><br>
             <label for="pwd">Password :</label>
