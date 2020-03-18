@@ -41,16 +41,18 @@
     }
     if (isset($_GET['name']) && isset($_GET['email'])) {
       $nomUtilisateur = $_GET['name'];
-      // ?><p><?php echo $nomUtilisateur; ?></p><?php
+      ?><p><?php echo $nomUtilisateur; ?></p><?php
       $_SESSION['nomuser'] = $nomUtilisateur;
       /*probleme dans l'écriture des fichiers*/
-      // chmod('./Data/dataFile'.$nomUtilisateur.'.txt',777);
       $dataFile = './Data/dataFile'.$nomUtilisateur.'.txt';
       file_put_contents($dataFile, $_GET['name'] .'\n');
       file_put_contents($dataFile, $_GET['first'] .'\n',FILE_APPEND);
       file_put_contents($dataFile, $_GET['adresse'] .'\n',FILE_APPEND);
       file_put_contents($dataFile, $_GET['email'] .'\n',FILE_APPEND);
       file_put_contents($dataFile, $_GET['number'] .'\n',FILE_APPEND);
+    }
+    if (isset($_GET['name']) && isset($_GET['pwd'])) {
+      $_SESSION['nomuser'] = $nomUtilisateur;
     }
      ?>
     <header>
@@ -61,12 +63,12 @@
         </a>
         <nav>
           <ul>
-            <a class="home" href="?nbPage=0"<?php $_SESSION["connect"]=$connect; $_SESSION["nbPage"] = 0; ?>><li>Home Page</li></a>
+            <a class="home" href="?nbPage=0"<?php $_SESSION["nbPage"] = 0; ?>><li>Home Page</li></a>
             <?php if($connect === 1){ ?>
-              <a class="client" href="?nbPage=1"<?php $_SESSION["connect"]=$connect; $_SESSION["nbPage"]=1; ?>><li>Client Page</li></a>
+              <a class="client" href="?nbPage=1"<?php $_SESSION["nbPage"]=1; ?>><li>Client Page</li></a>
             <?php } ?>
-            <a class="jobs" href="?nbPage=2"<?php $_SESSION["connect"]=$connect; $_SESSION["nbPage"]=2; ?>><li>Jobs - Add</li></a>
-            <a href="?nbPage=5"<?php $_SESSION["connect"]=$connect; $_SESSION["nbPage"]=5; ?>><li><img src="./Data/image/acount.jpg" alt="acount"></li></a>
+            <a class="jobs" href="?nbPage=2"<?php $_SESSION["nbPage"]=2; ?>><li>Jobs - Add</li></a>
+            <a href="?nbPage=5"<?php $_SESSION["nbPage"]=5; ?>><li><img src="./Data/image/acount.jpg" alt="acount"></li></a>
           </ul>
         </nav>
       </div>
@@ -213,9 +215,11 @@
             <label for="first">Enter your adresse : </label>
             <input type="text" name="adresse" value="Adresse"><br>
             <label for="first">Enter your email-adresse : </label>
-            <input type="email" name="email" value="Email"><br>
+            <input type="email" name="email" value="someone@gmail.com"><br>
             <label for="first">Enter your phone number : </label>
-            <input type="tel" name="number" value="Phone"><br>
+            <input type="tel" name="number" value="010203040506"><br>
+            <label for="pwd">Enter your password :</label>
+            <input type="password" name="pwd" value="password"><br>
             <input class="hide" type="number" name="nbPage" value="0">
             <input class="hide" type="number" name="connect" value="1">
             <input type="submit" value="Connect">
@@ -230,7 +234,7 @@
           <h2>Edit your infos :</h2>
           <?php
           //recupération du nom d'utilisateur via $_SESSION
-          $nomUtilisateur = 'Tanguy';
+          $nomUtilisateur = $_SESSION['nomuser'];
           $profileFileUs = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "r");
           ?>
           <form class="" action="?" method="get">
