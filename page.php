@@ -41,7 +41,6 @@
     }
     if (isset($_GET['name']) && isset($_GET['email'])) {
       $nomUtilisateur = $_GET['name'];
-      ?><p><?php echo $nomUtilisateur; ?></p><?php
       $_SESSION['nomuser'] = $nomUtilisateur;
       /*probleme dans l'écriture des fichiers*/
       $dataFile = './Data/dataFile'.$nomUtilisateur.'.txt';
@@ -74,6 +73,9 @@
       </div>
     </header>
     <?php
+    $connect = $_SESSION['connect'];
+    $nbPage = $_SESSION['nbPage'];
+    
     if ($nbPage === 0) { ?>
       <section>
         <article class="presentation">
@@ -89,7 +91,7 @@
     } elseif ($nbPage === 1 && $connect === 1) { ?>
       <section>
         <article class="addContract">
-          <a href="?nbPage=3&amp;<?php echo $connect; ?>">
+          <a href="?nbPage=3">
             <img src="./Data/image/plus.jpg" alt="un plus">
             <h3>Add a contract</h3>
           </a>
