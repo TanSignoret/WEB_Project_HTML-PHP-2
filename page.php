@@ -75,8 +75,9 @@
       </div>
     </header>
     <?php
-    $connect = $_SESSION['connect'];
-    $nbPage = $_SESSION['nbPage'];
+
+    $connect = intval($_SESSION['connect']);
+    $nbPage = intval($_SESSION['nbPage']);
 
     if ($nbPage === 0) { ?>
       <section>
