@@ -64,12 +64,12 @@
         </a>
         <nav>
           <ul>
-            <a class="home" href="?"<?php $_SESSION["nbPage"] = 0; ?>><li>Home Page</li></a>
+            <a class="home" href="?nbPage=0"<?php $_SESSION["nbPage"] = 0; ?>><li>Home Page</li></a>
             <?php if($connect === 1){ ?>
-              <a class="client" href="?"<?php $_SESSION["nbPage"] = 1; ?>><li>Client Page</li></a>
+              <a class="client" href="?nbPage=1"<?php $_SESSION["nbPage"] = 1; ?>><li>Client Page</li></a>
             <?php } ?>
-            <a class="jobs" href="?"<?php $_SESSION["nbPage"] = 2; ?>><li>Jobs - Add</li></a>
-            <a href="?"<?php $_SESSION["nbPage"] = 5; ?>><li><img src="./Data/image/acount.jpg" alt="acount"></li></a>
+            <a class="jobs" href="?nbPage=2"<?php $_SESSION["nbPage"] = 2; ?>><li>Jobs - Add</li></a>
+            <a href="?nbPage=5"<?php $_SESSION["nbPage"] = 5; ?>><li><img src="./Data/image/acount.jpg" alt="acount"></li></a>
           </ul>
         </nav>
       </div>
@@ -77,7 +77,7 @@
     <?php
 
     $connect = intval($_SESSION['connect']);
-    $nbPage = intval($_SESSION['nbPage']);
+    // $nbPage = intval($_SESSION['nbPage']);
 
     if ($nbPage === 0) { ?>
       <section>
