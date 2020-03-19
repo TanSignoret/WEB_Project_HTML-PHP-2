@@ -74,8 +74,7 @@
     </header>
     <?php
     $connect = $_SESSION['connect'];
-    $nbPage = $_SESSION['nbPage'];
-    
+
     if ($nbPage === 0) { ?>
       <section>
         <article class="presentation">
