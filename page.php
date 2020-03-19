@@ -46,11 +46,15 @@
       $_SESSION['nomuser'] = $nomUtilisateur;
       /*probleme dans l'écriture des fichiers*/
       $dataFile = './Data/dataFile'.$nomUtilisateur.'.txt';
-      file_put_contents($dataFile, $_GET['name'] .'\n');
-      file_put_contents($dataFile, $_GET['first'] .'\n',FILE_APPEND);
-      file_put_contents($dataFile, $_GET['adresse'] .'\n',FILE_APPEND);
-      file_put_contents($dataFile, $_GET['email'] .'\n',FILE_APPEND);
-      file_put_contents($dataFile, $_GET['number'] .'\n',FILE_APPEND);
+      file_put_contents($dataFile, $_GET['name']);
+      file_put_contents($dataFile, '\n', FILE_APPEND);
+      file_put_contents($dataFile, $_GET['first'], FILE_APPEND);
+      file_put_contents($dataFile, '\n', FILE_APPEND);
+      file_put_contents($dataFile, $_GET['adresse'], FILE_APPEND);
+      file_put_contents($dataFile, '\n', FILE_APPEND);
+      file_put_contents($dataFile, $_GET['email'], FILE_APPEND);
+      file_put_contents($dataFile, '\n', FILE_APPEND);
+      file_put_contents($dataFile, $_GET['number'], FILE_APPEND);
     }
     if (isset($_GET['name']) && isset($_GET['pwd'])) {
       $_SESSION['nomuser'] = $nomUtilisateur;
