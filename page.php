@@ -61,6 +61,9 @@
     }
      ?>
     <header>
+      <?php
+      $connect = intval($_SESSION['connect']);
+      ?>
       <div class="">
         <a href="?"<?php $_SESSION["nbPage"] = 0; ?>>
           <!-- <img src="Data/image/todaysArtisans.png" type="/image/png" alt="icon"> -->
@@ -242,6 +245,7 @@
         <article class="our info">
           <h2>Edit your infos :</h2>
           <?php
+          $_SESSION['connect'] = 1;
           //recupération du nom d'utilisateur via $_SESSION
           $nomUtilisateur = $_SESSION['nomuser'];
           $profileFileUs = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "r");
@@ -264,12 +268,13 @@
             <input type="email" name="mail" value="<?php echo $var ?>"><br>
             <input class="hide" type="number" name="nbPage" value="0">
             <input type="submit" value="Save">
-            <?php $_SESSION['connect'] = 1 ?>
+            <?php $_SESSION['connect'] = 1; ?>
           </form>
           <?php fclose($profileFileUs); ?>
-          <form class="" action="?nbPage=0" method="get">
+          <form class="" action="?" method="get">
+            <input class="hide" type="number" name="nbPage" value="0">
             <input type="submit" value="Disconnect">
-            <?php $_SESSION['connect'] = 0 ?>
+            <?php $_SESSION['connect'] = 0; ?>
           </form>
         </article>
       </section>
