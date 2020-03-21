@@ -28,9 +28,7 @@
     if (isset($_GET['connect'])) {
       $connect = intval($_GET['connect']);
       $_SESSION["connect"] = $connect;
-    } elseif (isset($_SESSION["connect"])) {
-      $_SESSION["connect"] = $connect;
-    } else {
+    } elseif (!isset($_SESSION["connect"])) {
       $_SESSION["connect"] = 0;
     }
 
