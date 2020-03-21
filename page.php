@@ -28,6 +28,8 @@
     if (isset($_GET['connect'])) {
       $connect = intval($_GET['connect']);
       $_SESSION["connect"] = $connect;
+    } elseif (isset($_SESSION["connect"])) {
+      $_SESSION["connect"] = $connect;
     } else {
       $_SESSION["connect"] = 0;
     }
@@ -298,7 +300,7 @@
     <?php } ?>
     <footer>
       <h2>About us :</h2>
-      <p>Legals mentions : Today's Artisans Ⓒ Compagny Web developpers : Tanguy, Thomas, Flavien</p>
+      <p>Legals mentions : Today's Artisans Ⓒ Compagny  -  Web developpers : Tanguy, Thomas, Flavien</p>
     </footer>
 	</body>
 </html>
