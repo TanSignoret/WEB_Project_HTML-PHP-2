@@ -91,7 +91,7 @@
           <ul>
             <a class="home" href="?nbPage=0"<?php $_SESSION["nbPage"] = 0; ?>><li>Home Page</li></a>
             <?php if($connect === 1){ ?>
-              <a class="client" href="?nbPage=1"<?php $_SESSION["nbPage"] = 1; ?>><li>Client Page</li></a>
+              <a class="client" href="?nbPage=3"<?php $_SESSION["nbPage"] = 1; ?>><li>Add a contract</li></a>
             <?php } ?>
             <a class="jobs" href="?nbPage=2"<?php $_SESSION["nbPage"] = 2; ?>><li>Jobs - Add</li></a>
             <a href="?nbPage=5"<?php $_SESSION["nbPage"] = 5; ?>><li><img src="./Data/image/acount.jpg" alt="acount"></li></a>
@@ -117,8 +117,8 @@
       </section>
       <?php
     } elseif ($nbPage === 1 && $connect === 1) { ?>
-      <section>
-        <article class="addContract">
+      <section class="addSec">
+        <article>
           <a href="?nbPage=3">
             <img src="./Data/image/plus.jpg" alt="un plus">
             <h3>Add a contract</h3>
@@ -190,22 +190,24 @@
       </section>
       <?php
     } elseif ($nbPage === 3 && $connect === 1 ){?>
-      <h2>Creer une annonce</h2>
-      <form class="" action="?" method="get">
-        <label for="title">Title of your add :</label>
-        <input type="text" name="title" value="Gardenning"><br>
-        <label for="where">Where it is :</label>
-        <input type="text" name="where" value="Paris"><br>
-        <label for="img">Upload a image</label>
-        <input type="file" name="img" value="image.jpg"><br>
-        <label for="exp">Wath is the experiance needed for your add :</label>
-        <input type="number" name="exp" value="1"><br>
-        <label for="px">Remuneration by hour:</label>
-        <input type="number" name="px" value="5"><br>
-        <input class="hide" type="number" name="connect" value="1">
-        <input class="hide" type="number" name="nbPage" value="3">
-        <input type="submit" value="Create">
-      </form>
+      <section class="addSec">
+        <h2>Create a contract</h2>
+        <form class="" action="?" method="get">
+          <label for="title">Title of your add :</label>
+          <input type="text" name="title" value="Gardenning"><br>
+          <label for="where">Where it is :</label>
+          <input type="text" name="where" value="Paris"><br>
+          <label for="img">Upload a image</label>
+          <input type="file" name="img" value="image.jpg"><br>
+          <label for="exp">Wath is the experiance needed for your add :</label>
+          <input type="number" name="exp" value="1"><br>
+          <label for="px">Remuneration by hour:</label>
+          <input type="number" name="px" value="5"><br>
+          <input class="hide" type="number" name="connect" value="1">
+          <input class="hide" type="number" name="nbPage" value="3">
+          <input type="submit" value="Create">
+        </form>
+      </section>
     <?php
     } elseif ($nbPage === 5 && $connect === 0) { ?>
       <section>
