@@ -24,23 +24,38 @@
     } else {
       $_SESSION["nbPage"] = 0;
     }
-    if (isset($_SESSION['connect'])) {
-      $connect = intval($_SESSION['connect']);
-      $_SESSION["nbPage"] = $connect;
+
+    if (isset($_GET['connect'])) {
+      $connect = intval($_GET['connect']);
+      $_SESSION["connect"] = $connect;
     } else {
       $_SESSION["connect"] = 0;
     }
+
     if (isset($_SESSION['titre']) && isset($_SESSION['annonce'])) {
       $nomUtilisateur = $_SESSION['nomuser'];
       $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w");
       file_put_contents($dataFile, $_SESSION['titre'], FILE_APPEND);
     }
-    if (isset($_GET['titre']) && isset($_GET['annonce']) && isset($_GET['name'])) {
-      $nomUtilisateur = $_GET['name'];
-      $_SESSION['nomuser'] = $nomUtilisateur;
-      $dataFile = fopen('./Data/dataFile'.$nomUtilisateur.'.txt', "w");
+
+    if (isset($_GET['titre']) && isset($_GET['where'])) {
+      $dataFile = './Data/dataFile.txt';
+      $nbAn = intval(file_get_contents($dataFile));
+      file_put_contents($dataFile, $nbAn + 1);
+      file_put_contents($dataFile, 'encours', FILE_APPEND);
+      // fputs()
+      file_put_contents($dataFile, '\n', FILE_APPEND);
+      file_put_contents($dataFile, 'image1.png', FILE_APPEND);
+      file_put_contents($dataFile, '\n', FILE_APPEND);
       file_put_contents($dataFile, $_GET['titre'], FILE_APPEND);
+      file_put_contents($dataFile, '\n', FILE_APPEND);
+      file_put_contents($dataFile, $_GET['px'], FILE_APPEND);
+      file_put_contents($dataFile, '\n', FILE_APPEND);
+      file_put_contents($dataFile, $_GET['where'], FILE_APPEND);
+      file_put_contents($dataFile, '\n', FILE_APPEND);
+      file_put_contents($dataFile, $_GET['exp'], FILE_APPEND);
     }
+
     if (isset($_GET['name']) && isset($_GET['email'])) {
       $nomUtilisateur = $_GET['name'];
       $_SESSION['nomuser'] = $nomUtilisateur;
@@ -55,10 +70,13 @@
       file_put_contents($dataFile, $_GET['email'], FILE_APPEND);
       file_put_contents($dataFile, '\n', FILE_APPEND);
       file_put_contents($dataFile, $_GET['number'], FILE_APPEND);
+    } else {
+      $_SESSION['nomuser'] = $_GET['name'];
     }
-    if (isset($_GET['name']) && isset($_GET['pwd'])) {
-      $_SESSION['nomuser'] = $nomUtilisateur;
-    }
+
+    $nbPage = $_SESSION["nbPage"];
+    $connect = $_SESSION["connect"];
+
      ?>
     <header>
       <?php
@@ -171,7 +189,7 @@
         <?php fclose($dataFile); ?>
       </section>
       <?php
-    } elseif ($nbPage === 3 ) {// && $connect=2?>
+    } elseif ($nbPage === 3 && $connect === 1 ){?>
       <h2>Creer une annonce</h2>
       <form class="" action="?" method="get">
         <label for="title">Title of your add :</label>
@@ -179,14 +197,13 @@
         <label for="where">Where it is :</label>
         <input type="text" name="where" value="Paris"><br>
         <label for="img">Upload a image</label>
-        <input type="image" name="img" value="image.jpg"><br>
-        <label for="exp">Quel est l'experiance requise pour répondre à votre annonce :</label>
+        <input type="file" name="img" value="image.jpg"><br>
+        <label for="exp">Wath is the experiance needed for your add :</label>
         <input type="number" name="exp" value="1"><br>
-        <label for="px">Quel est la rémunération de votre annonce :</label>
-        <input type="number" name="px" value="0 €"><br>
-        <input class="hide" type="number" name="connect" value="0">
-        <input class="hide" type="number" name="nbPage" value="0">
-        <input class="hide" type="number" name="addannonce" value="1">
+        <label for="px">Remuneration by hour:</label>
+        <input type="number" name="px" value="5"><br>
+        <input class="hide" type="number" name="connect" value="1">
+        <input class="hide" type="number" name="nbPage" value="3">
         <input type="submit" value="Connect">
       </form>
     <?php
@@ -206,9 +223,9 @@
           </form>
         </article>
         <article class="">
-          <h3>You haven't het a acount. Create you one :</h3>
+          <h3>You haven't het a account. Create you one :</h3>
           <form action="?nbPage=7" method="post">
-            <input type="submit" value="Create a new acount"><br>
+            <input type="submit" value="Create a new account"><br>
             <input class="hide" type="number" name="connect" value="0">
             <?php $_SESSION['connect'] = 0 ?>
           </form>
@@ -218,7 +235,7 @@
   } elseif ($nbPage === 7 && $connect === 0) { ?>
       <section>
         <article class="">
-          <h2>Create a acount</h2>
+          <h2>Create a account</h2>
           <form class="" action="?" method="get">
             <label for="name">Enter your name : </label>
             <input type="text" name="name" value="Name"><br>
@@ -281,8 +298,7 @@
     <?php } ?>
     <footer>
       <h2>About us :</h2>
-      <p>Legals mentions : Today's Artisans Ⓒ Compagny</p>
-      <p>Web developpers : Tanguy, Thomas, Flavien</p>
+      <p>Legals mentions : Today's Artisans Ⓒ Compagny Web developpers : Tanguy, Thomas, Flavien</p>
     </footer>
 	</body>
 </html>

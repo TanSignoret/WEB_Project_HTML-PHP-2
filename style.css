@@ -42,6 +42,7 @@ article h3{
 }
 /*uniquement pour la page jobs*/
 .jobsSec{
+  text-align: center;
   margin-right: -15px;
   margin-left: -15px;
   /* width: 80%; */
@@ -89,7 +90,8 @@ article h3{
 }
 .jobsSec div article div:last-child{
   width: 70%;
-  float: right;
+  text-align: center;
+  /* float: right; */
   justify-content: center;
 }
 .jobsSec div article div{
