@@ -267,14 +267,14 @@
             <?php $var = fgets($profileFileUs); ?>
             <input type="email" name="mail" value="<?php echo $var ?>"><br>
             <input class="hide" type="number" name="nbPage" value="0">
+            <input class="hide" type="number" name="connect" value="1">
             <input type="submit" value="Save">
-            <?php $_SESSION['connect'] = 1; ?>
           </form>
           <?php fclose($profileFileUs); ?>
           <form class="" action="?" method="get">
             <input class="hide" type="number" name="nbPage" value="0">
+            <input class="hide" type="number" name="connect" value="0">
             <input type="submit" value="Disconnect">
-            <?php $_SESSION['connect'] = 0; ?>
           </form>
         </article>
       </section>
