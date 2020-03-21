@@ -204,7 +204,7 @@
         <input type="number" name="px" value="5"><br>
         <input class="hide" type="number" name="connect" value="1">
         <input class="hide" type="number" name="nbPage" value="3">
-        <input type="submit" value="Connect">
+        <input type="submit" value="Create">
       </form>
     <?php
     } elseif ($nbPage === 5 && $connect === 0) { ?>

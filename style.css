@@ -133,16 +133,23 @@ section .addContract a img{
   margin-bottom: 1%;
 }
 /*style sheet for froms*/
+form{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
 form input{
   margin-left: 1%;
   height: 5%;
+  width: 80%;
   padding: 5px 5px;
   box-sizing: border-box;
   border: 2px solid white;
   border-radius: 4px;
-  background-color: black;
+  background-color: #595959;
   resize: none;
-  color: #f2764e;
+  color: white;
 }
 
 form .hide{
