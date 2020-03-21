@@ -145,6 +145,7 @@ section .addContract a img{
   margin: 1%;
   float: left;
   text-align: right;
+  padding: 5px 5px;
 }
 .addSec form input{
   margin: 1%;
@@ -156,7 +157,7 @@ section .addContract a img{
   border: 2px solid white;
   border-radius: 4px;
   background-color: #595959;
-  resize: none;
+  /* resize: none; */
   color: white;
 }
 
