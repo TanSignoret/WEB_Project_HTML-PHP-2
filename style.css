@@ -133,10 +133,6 @@ section .addContract a img{
   margin-bottom: 1%;
 }
 /*style sheet for froms*/
-.addSec{
-  width: 80%;
-  margin: auto;
-}
 .addSec h2{
   text-align: center;
 }
@@ -147,7 +143,7 @@ section .addContract a img{
   margin-bottom: 0.5%;
   margin-right: auto;
   margin-left: auto;
-  width: 35%;
+  width: 30%;
   float: left;
   text-align: right;
   padding: 5px 5px;
@@ -167,6 +163,9 @@ section .addContract a img{
   border-radius: 4px;
   background-color: #595959;
   color: white;
+}
+.addSec form:last-child{
+  align-items: center;
 }
 
 form .hide{
@@ -197,6 +196,9 @@ form .hide{
   border: 2px solid white;
   color: white;
   background-color: #595959;
+}
+.ourInfo form:last-child{
+  align-items: center;
 }
 
 /*part of style sheet for footer*/
