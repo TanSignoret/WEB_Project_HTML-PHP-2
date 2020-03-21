@@ -133,16 +133,17 @@ section .addContract a img{
   margin-bottom: 1%;
 }
 /*style sheet for froms*/
-form{
+/* form{
   display: flex;
   justify-content: space-between;
   width: 80%;
-}
+} */
 
 form input{
   margin-left: 1%;
   height: 5%;
   width: 80%;
+  float: right;
   padding: 5px 5px;
   box-sizing: border-box;
   border: 2px solid white;
