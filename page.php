@@ -261,7 +261,7 @@
     <?php
   } elseif ($nbPage === 5 && $connect === 1) { ?>
       <section>
-        <article class="our info">
+        <article class="ourInfo">
           <h2>Edit your infos :</h2>
           <?php
           $_SESSION['connect'] = 1;
