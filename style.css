@@ -140,12 +140,15 @@ section .addContract a img{
 .addSec h2{
   text-align: center;
 }
-.addSec form{
-
+.addSec form label{
+  height : 6%;
+  margin: 1%;
+  float: left;
+  text-align: right;
 }
 .addSec form input{
-  margin-left: 1%;
-  height: 5%;
+  margin: 1%;
+  height: 6%;
   width: 60%;
   float: right;
   padding: 5px 5px;
