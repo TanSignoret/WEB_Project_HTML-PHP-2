@@ -165,7 +165,8 @@ section .addContract a img{
   color: white;
 }
 .addSec form:last-child{
-  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
 form .hide{
@@ -198,7 +199,8 @@ form .hide{
   background-color: #595959;
 }
 .ourInfo form:last-child{
-  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
 /*part of style sheet for footer*/
