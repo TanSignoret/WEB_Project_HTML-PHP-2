@@ -70,7 +70,7 @@
       file_put_contents($dataFile, $_GET['email'], FILE_APPEND);
       file_put_contents($dataFile, '\n', FILE_APPEND);
       file_put_contents($dataFile, $_GET['number'], FILE_APPEND);
-    } else {
+    } elseif (isset($_GET['name'])) {
       $_SESSION['nomuser'] = $_GET['name'];
     }
 
