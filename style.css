@@ -143,14 +143,20 @@ section .addContract a img{
 .addSec form label{
   border: 2px solid #595959;
   height : 6%;
-  margin: 1%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-right: auto;
+  margin-left: auto;
   width: 35%;
   float: left;
   text-align: right;
   padding: 5px 5px;
 }
 .addSec form input{
-  margin: 1%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-right: auto;
+  margin-left: auto;
   height: 6%;
   width: 60%;
   float: right;
@@ -169,14 +175,20 @@ form .hide{
 
 .ourInfo form label{
   height : 6%;
-  margin: 1%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-right: auto;
+  margin-left: auto;
   width: 30%;
   float: left;
   text-align: right;
   padding: 5px 5px;
 }
 .ourInfo form input{
-  margin: 1%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-right: auto;
+  margin-left: auto;
   height: 6%;
   width: 60%;
   float: right;
