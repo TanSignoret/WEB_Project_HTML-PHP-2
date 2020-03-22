@@ -230,9 +230,8 @@ form .hide{
   padding: 5px 5px;
 }
 .login form:last-child{
-  width: auto;
-  align-items: center;
-  text-align: center;
+  width: 50%;
+  margin: auto;
 }
 
 /*part of style sheet for footer*/
