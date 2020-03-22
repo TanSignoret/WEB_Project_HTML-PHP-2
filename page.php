@@ -292,7 +292,7 @@
           </form>
         </article>
         <?php fclose($profileFileUs); ?>
-        <article>
+        <article class="ourInfo">
           <h2>Do you want to log out ?</h2>
           <form class="" action="?" method="get">
             <input class="hide" type="number" name="nbPage" value="0">
