@@ -210,8 +210,8 @@
       </section>
     <?php
     } elseif ($nbPage === 5 && $connect === 0) { ?>
-      <section>
-        <article class="login">
+      <section class="login">
+        <article>
           <h2>You have a account : connect you :</h2>
           <form action="?" method="get">
             <label for="name">Login :</label>
@@ -225,10 +225,10 @@
           </form>
         </article>
         <article class="">
-          <h3>You haven't het a account. Create you one :</h3>
-          <form action="?nbPage=7" method="post">
-            <input type="submit" value="Create a new account"><br>
+          <h2>You haven't het a account. Create you one :</h2>
+          <form action="?nbPage=7" method="get">
             <input class="hide" type="number" name="connect" value="0">
+            <input type="submit" value="Create a new account"><br>
             <?php $_SESSION['connect'] = 0 ?>
           </form>
         </article>

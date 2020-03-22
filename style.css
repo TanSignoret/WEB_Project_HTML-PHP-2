@@ -200,6 +200,38 @@ form .hide{
 }
 .ourInfo form:last-child{
   width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.login form label{
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 6%;
+  width: 60%;
+  float: right;
+  text-align: center;
+  padding: 5px 5px;
+  border: 2px solid white;
+  color: white;
+  background-color: #595959;
+}
+.login form input{
+  height : 6%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 30%;
+  float: left;
+  text-align: right;
+  padding: 5px 5px;
+}
+.login form:last-child{
+  width: auto;
+  align-items: center;
   text-align: center;
 }
 
