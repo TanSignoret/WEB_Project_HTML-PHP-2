@@ -204,7 +204,7 @@ form .hide{
   text-align: center;
 }
 
-.login form label{
+.login form input{
   margin-top: 0.5%;
   margin-bottom: 0.5%;
   margin-right: auto;
@@ -218,7 +218,7 @@ form .hide{
   color: white;
   background-color: #595959;
 }
-.login form input{
+.login form label{
   height : 6%;
   margin-top: 0.5%;
   margin-bottom: 0.5%;
