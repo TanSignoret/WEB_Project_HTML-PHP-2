@@ -230,7 +230,7 @@ form .hide{
   padding: 5px 5px;
 }
 .login form input:last-of-type{
-  width: 50%;
+  width: 100%;
   margin: auto;
 }
 
