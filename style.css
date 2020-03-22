@@ -199,9 +199,9 @@ form .hide{
   background-color: #595959;
 }
 .ourInfo form:last-child{
-  width: 100%;
-  align-items: center;
-  text-align: center;
+  width: 50%;
+  margin-right: 25%;
+  margin-left: 25%;
 }
 
 .login form input{

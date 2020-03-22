@@ -221,15 +221,16 @@
             <input class="hide" type="number" name="nbPage" value="0">
             <input class="hide" type="number" name="connect" value="1">
             <input type="submit" value="Connect"><br>
-            <?php $_SESSION['connect'] = 1 ?>
+            <!-- <?php $_SESSION['connect'] = 1 ?> -->
           </form>
         </article>
         <article class="">
           <h2>You haven't het a account. Create you one :</h2>
-          <form action="?nbPage=7" method="get">
+          <form action="?" method="get">
+            <input class="hide" type="number" name="nbPage" value="7">
             <input class="hide" type="number" name="connect" value="0">
             <input type="submit" value="Create a new account"><br>
-            <?php $_SESSION['connect'] = 0 ?>
+            <!-- <?php $_SESSION['connect'] = 0 ?> -->
           </form>
         </article>
       </section>
