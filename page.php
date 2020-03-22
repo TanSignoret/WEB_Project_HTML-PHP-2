@@ -290,8 +290,9 @@
             <input class="hide" type="number" name="connect" value="1">
             <input type="submit" value="Save">
           </form>
-          <?php fclose($profileFileUs); ?>
-          <br>
+        </article>
+        <?php fclose($profileFileUs); ?>
+        <article>
           <h2>Do you want to log out ?</h2>
           <form class="" action="?" method="get">
             <input class="hide" type="number" name="nbPage" value="0">
