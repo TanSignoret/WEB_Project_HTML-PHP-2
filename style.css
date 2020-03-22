@@ -229,7 +229,7 @@ form .hide{
   text-align: right;
   padding: 5px 5px;
 }
-.login form:last-child{
+.login form input:last-of-type{
   width: 50%;
   margin: auto;
 }
