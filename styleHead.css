@@ -77,6 +77,10 @@ header div nav ul a:first-child{
   border-left:  0.5px solid #626262;
 }
 
+.presentation{
+  text-align: center;
+}
+
 nav ul a:hover{
   background-color: #f90;
   color: white;
