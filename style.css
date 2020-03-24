@@ -55,7 +55,8 @@ article h3{
   flex-direction: column;
 }
 .jobsSec div article{
-  background-color: #fff;
+  background-color: #595959;
+  color: white;
   display: flex;
   flex-direction:row;
   justify-content: space-around;
