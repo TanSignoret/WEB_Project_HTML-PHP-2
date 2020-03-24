@@ -145,7 +145,7 @@ section .addContract a img{
   margin-left: auto;
   width: 30%;
   float: left;
-  text-align: right;
+  text-align: center;
   padding: 5px 5px;
 }
 .addSec form input{
@@ -181,7 +181,7 @@ form .hide{
   margin-left: auto;
   width: 30%;
   float: left;
-  text-align: right;
+  text-align: center;
   padding: 5px 5px;
 }
 .ourInfo form input{
@@ -228,7 +228,7 @@ form .hide{
   margin-left: auto;
   width: 30%;
   float: left;
-  text-align: right;
+  text-align: center;
   padding: 5px 5px;
 }
 .login form input:last-of-type{
