@@ -12,6 +12,7 @@ body{
   margin: auto;
   /* background-color: #fff; */
   color: white;
+  text-align: center;
 }
 h1, h2{
   color: #f90;
@@ -50,8 +51,6 @@ article h3{
   flex-wrap: wrap;
   display: flex;
   flex-direction: column;
-}
-.jobsSec div article{
 }
 .jobsSec div article{
   background-color: #777;

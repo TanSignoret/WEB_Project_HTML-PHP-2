@@ -227,7 +227,7 @@
           </form>
         </article>
         <article class="">
-          <h2>You haven't het a account. Create you one :</h2>
+          <h2>You haven't a account het. Create you one :</h2>
           <form action="?" method="get">
             <input class="hide" type="number" name="nbPage" value="7">
             <input class="hide" type="number" name="connect" value="0">
