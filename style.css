@@ -52,6 +52,8 @@ article h3{
   flex-direction: column;
 }
 .jobsSec div article{
+}
+.jobsSec div article{
   background-color: #595959;
   color: white;
   display: flex;
@@ -78,7 +80,7 @@ article h3{
   flex-direction: column;
 }
 .jobsSec div article div:last-child h2{
-  color: black;
+  color: #f90;
 }
 .jobsSec div article div:last-child h3{
   padding: 0px;
