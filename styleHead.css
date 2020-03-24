@@ -81,7 +81,8 @@ header div nav ul a:first-child{
   text-align: center;
 }
 .presentation article p{
-  text-align: center;
+  width: 60%;
+  margin: auto;
 }
 
 nav ul a:hover{
