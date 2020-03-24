@@ -238,6 +238,38 @@ form .hide{
   margin-left: 25%;
 }
 
+.createSec form input{
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 6%;
+  width: 60%;
+  float: right;
+  text-align: center;
+  padding: 5px 5px;
+  border: 2px solid white;
+  color: white;
+  background-color: #595959;
+}
+.createSec form label{
+  height : 6%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 30%;
+  float: left;
+  text-align: center;
+  padding: 5px 5px;
+}
+.createSec form input:last-of-type{
+  width: 50%;
+  border-radius: 4px;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
 /*part of style sheet for footer*/
 footer{
   text-align: center;
