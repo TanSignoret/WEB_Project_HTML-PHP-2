@@ -269,9 +269,21 @@ form .hide{
   margin-left: 25%;
 }
 
+.presentation{
+  text-align: justify;
+}
+.presentation article p{
+  width: 60%;
+  margin: auto;
+}
+.presentation article h2:first-of-type{
+  font-variant: small-caps;
+}
+
 /*part of style sheet for footer*/
 footer{
   text-align: center;
   width: 90%;
   margin: auto;
+  margin-top: 5%;
 }

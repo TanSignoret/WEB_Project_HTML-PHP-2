@@ -77,17 +77,6 @@ header div nav ul a:first-child{
   border-left:  0.5px solid #626262;
 }
 
-.presentation{
-  text-align: justify;
-}
-.presentation article p{
-  width: 60%;
-  margin: auto;
-}
-.presentation article h2:first-of-type{
-  font-variant: small-caps;
-}
-
 nav ul a:hover{
   background-color: #f90;
   color: white;
