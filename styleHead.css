@@ -80,6 +80,9 @@ header div nav ul a:first-child{
 .presentation{
   text-align: center;
 }
+.presentation article p{
+  text-align: center;
+}
 
 nav ul a:hover{
   background-color: #f90;
