@@ -108,11 +108,13 @@
       <section>
         <article class="presentation">
           <h2>Our company :</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>We are a new enterprise looking forward to help all people to show their Artisan skills no matter the age, location or any social distinction. We want this to be a friendly and helpful tool for anyone looking for a work to be done or do a job. Our platform is made inn a way that everyone can have access to it without any complication. This is made in a way that people that doesn't have a great technology knowledge can look for a job or search for a Artisan.</p>
         </article>
         <article class="">
           <h2>Are you looking for a job ?</h2>
+          <p>Don't worry, our site is here for people who wants to get a job. Just create an account and look for all the contracts offered, chose the right one for you and it's done!</p>
           <h2>Do you need someone for a job ?</h2>
+          <p>All you have to do is create an account and post a contract offer specifying all the information about the job. Next to that, if anybody is interested you will receive a notification that a person has accepted your contract.</p>
         </article>
       </section>
       <?php
