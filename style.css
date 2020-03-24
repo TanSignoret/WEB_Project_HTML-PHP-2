@@ -164,7 +164,7 @@ section .addContract a img{
   background-color: #595959;
   color: white;
 }
-.addSec form:last-child{
+.addSec form:last-of-type{
   width: 50%;
   margin-right: 25%;
   margin-left: 25%;
