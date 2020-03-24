@@ -180,7 +180,7 @@ form .hide{
   margin-right: auto;
   margin-left: auto;
   width: 30%;
-  float: right;
+  float: left;
   text-align: center;
   padding: 5px 5px;
 }
@@ -191,6 +191,7 @@ form .hide{
   margin-left: auto;
   height: 6%;
   width: 60%;
+  float: right;
   text-align: center;
   padding: 5px 5px;
   border: 2px solid white;
