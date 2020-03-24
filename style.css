@@ -164,7 +164,7 @@ section .addContract a img{
   background-color: #595959;
   color: white;
 }
-.addSec form:last-of-type{
+.addSec form input:last-of-type{
   width: 50%;
   margin-right: 25%;
   margin-left: 25%;
@@ -199,6 +199,7 @@ form .hide{
   background-color: #595959;
 }
 .ourInfo form:last-child{
+  width: 100%;
   width: 50%;
   margin-right: 25%;
   margin-left: 25%;
