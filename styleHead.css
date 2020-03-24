@@ -78,6 +78,6 @@ header div nav ul a:first-child{
 }
 
 nav ul a:hover{
-  background-color: #d0d0d0;
-  color: black;
+  background-color: #f90;
+  color: white;
 }

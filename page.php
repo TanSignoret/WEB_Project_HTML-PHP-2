@@ -310,7 +310,7 @@
     <?php } ?>
     <footer>
       <h2>About us :</h2>
-      <p>Legals mentions : Today's Artisans Ⓒ Compagny  -  Web developpers : Tanguy, Thomas, Flavien</p>
+      <p>Legal mentions : Today's Artisans Ⓒ Company  -  Web developers : Tanguy, Thomas, Flavien</p>
     </footer>
 	</body>
 </html>
