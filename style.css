@@ -198,7 +198,7 @@ form .hide{
   color: white;
   background-color: #595959;
 }
-.ourInfo form:last-child{
+.ourInfo form input:last-of-type{
   width: 100%;
   width: 50%;
   margin-right: 25%;
