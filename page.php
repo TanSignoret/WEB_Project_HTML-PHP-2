@@ -107,14 +107,13 @@
     if ($nbPage === 0) { ?>
       <section class="presentation">
         <article>
-          <h2>Our company :</h2>
-          <p>We are a new enterprise looking forward to help all people to show their Artisan skills no matter the age, location or any social distinction. We want this to be a friendly and helpful tool for anyone looking for a work to be done or do a job. Our platform is made inn a way that everyone can have access to it without any complication. This is made in a way that people that doesn't have a great technology knowledge can look for a job or search for a Artisan.</p>
-        </article>
-        <article>
+          <h2>Our company</h2>
           <h2>Are you looking for a job ?</h2>
           <p>Don't worry, our site is here for people who wants to get a job. Just create an account and look for all the contracts offered, chose the right one for you and it's done!</p>
           <h2>Do you need someone for a job ?</h2>
           <p>All you have to do is create an account and post a contract offer specifying all the information about the job. Next to that, if anybody is interested you will receive a notification that a person has accepted your contract.</p>
+          <h2>About us :</h2>
+          <p>We are a new enterprise looking forward to help all people to show their Artisan skills no matter the age, location or any social distinction. We want this to be a friendly and helpful tool for anyone looking for a work to be done or do a job. Our platform is made inn a way that everyone can have access to it without any complication. This is made in a way that people that doesn't have a great technology knowledge can look for a job or search for a Artisan.</p>
         </article>
       </section>
       <?php
@@ -309,7 +308,6 @@
       </section>
     <?php } ?>
     <footer>
-      <h2>About us :</h2>
       <p>Legal mentions : Today's Artisans Ⓒ Company  -  Web developers : Tanguy, Thomas, Flavien</p>
     </footer>
 	</body>

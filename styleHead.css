@@ -84,6 +84,9 @@ header div nav ul a:first-child{
   width: 60%;
   margin: auto;
 }
+.presentation article h2:first-of-type{
+  font-variant: small-caps;
+}
 
 nav ul a:hover{
   background-color: #f90;
