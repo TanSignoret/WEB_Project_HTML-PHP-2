@@ -165,8 +165,9 @@ section .addContract a img{
   color: white;
 }
 .addSec form:last-child{
-  width: 100%;
-  text-align: center;
+  width: 50%;
+  margin-right: 25%;
+  margin-left: 25%;
 }
 
 form .hide{
@@ -229,7 +230,6 @@ form .hide{
 }
 .login form input:last-of-type{
   width: 50%;
-  /* max-width: 350px; */
   margin-right: 25%;
   margin-left: 25%;
 }
