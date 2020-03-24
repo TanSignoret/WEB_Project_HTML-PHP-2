@@ -158,7 +158,6 @@ section .addContract a img{
   float: right;
   text-align: center;
   padding: 5px 5px;
-  /* box-sizing: border-box; */
   border: 2px solid white;
   border-radius: 4px;
   background-color: #595959;
@@ -181,8 +180,8 @@ form .hide{
   margin-right: auto;
   margin-left: auto;
   width: 30%;
-  float: left;
-  text-align: right;
+  float: right;
+  text-align: center;
   padding: 5px 5px;
 }
 .ourInfo form input{
@@ -201,6 +200,7 @@ form .hide{
 .ourInfo form input:last-of-type{
   width: 100%;
   width: 50%;
+  border-radius: 4px;
   margin-right: 25%;
   margin-left: 25%;
 }
@@ -212,7 +212,8 @@ form .hide{
   margin-left: auto;
   height: 6%;
   width: 60%;
-  text-align: center;
+  float: left;
+  text-align: right;
   padding: 5px 5px;
   border: 2px solid white;
   color: white;
@@ -231,6 +232,7 @@ form .hide{
 }
 .login form input:last-of-type{
   width: 50%;
+  border-radius: 4px;
   margin-right: 25%;
   margin-left: 25%;
 }
