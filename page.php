@@ -254,8 +254,8 @@
             <input type="password" name="pwd" value="password"><br>
             <input class="hide" type="number" name="nbPage" value="0">
             <input class="hide" type="number" name="connect" value="1">
-            <input type="submit" value="Connect">
-            <?php $_SESSION['connect'] = 1 ?>
+            <input type="submit" value="Cancel" <?php $_SESSION['connect'] = 0 ?>>
+            <input type="submit" value="Create" <?php $_SESSION['connect'] = 1 ?>>            
           </form>
         </article>
       </section>
