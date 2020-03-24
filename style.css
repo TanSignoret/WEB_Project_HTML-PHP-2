@@ -226,8 +226,8 @@ form .hide{
   margin-right: auto;
   margin-left: auto;
   width: 30%;
-  float: left;
-  text-align: right;
+  float: right;
+  text-align: center;
   padding: 5px 5px;
 }
 .login form input:last-of-type{
