@@ -278,6 +278,7 @@ form .hide{
 }
 .presentation article h2:first-of-type{
   font-variant: small-caps;
+  font-size: 2em;
 }
 
 /*part of style sheet for footer*/

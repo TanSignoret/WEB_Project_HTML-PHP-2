@@ -216,7 +216,7 @@
           <h2>You have a account : connect you :</h2>
           <form action="?" method="get">
             <label for="name">Login :</label>
-            <input type="text" name="name" value="yolo"><br><br>
+            <input type="text" name="name" value="Smith"><br><br>
             <label for="pwd">Password :</label>
             <input type="password" name="pwd" value="password"><br><br>
             <input class="hide" type="number" name="nbPage" value="0">
@@ -245,9 +245,9 @@
             <input type="text" name="name" value="Name"><br>
             <label for="first">Enter your first name : </label>
             <input type="text" name="first" value="First name"><br>
-            <label for="first">Enter your adresse : </label>
-            <input type="text" name="adresse" value="Adresse"><br>
-            <label for="first">Enter your email-adresse : </label>
+            <label for="first">Enter your adress : </label>
+            <input type="text" name="adresse" value="Adress"><br>
+            <label for="first">Enter your email-adress : </label>
             <input type="email" name="email" value="someone@gmail.com"><br>
             <label for="first">Enter your phone number : </label>
             <input type="tel" name="number" value="010203040506"><br>
@@ -282,7 +282,7 @@
             <label for="fn">First name : </label>
             <?php $var = fgets($profileFileUs); ?>
             <input type="text" name="fn" value="<?php echo $var ?>"><br>
-            <label for="ad">Adresse : </label>
+            <label for="ad">Adress : </label>
             <?php $var = fgets($profileFileUs); ?>
             <input type="text" name="ad" value="<?php echo $var ?>"><br>
             <label for="tel">Phone : </label>
